@@ -1,4 +1,173 @@
+<!DOCTYPE html>
+<html>
 
-OpenSUN 3D
-<br/>
-1st Workshop on Open-Vocabulary 3D Scene Understanding
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Mask3D">
+  <meta name="keywords" content="OpenSun3D">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open☀️3D </title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+  <script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+
+  <style>
+    .rcorners1 {
+      border-radius: 10px;
+      background: #ffffffd0;
+      padding: 5px;
+      font-size: 120%;
+      color: #5c5c5c;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">☀️ OpenSUN 3D 🌍<br />
+              <p class="title is-3 publication-title">1st Workshop on Open-Vocabulary 3D Scene Understanding</p>
+            </h1>
+            <h1 class="is-is-5" style="color: #5c5c5c;">in conjunction with ICCV 2023, 2 October in Paris, France.</h1>
+
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="assets/teaser.jpg" style="max-width:100%" />
+        <h2 class="subtitle has-text-centered">
+        </h2>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+    <section class="section" id="Motivation">
+        <div class="container is-max-desktop content">
+          <h2 class="title">Motivation 💡</h2>
+          <div class="content has-text-justified">
+          The ability to perceive, understand and interact with arbitrary 3D environments is a long-standing goal in both academia and industry with applications in AR/VR as well as robotics.
+          Current 3D scene understanding models are largely limited to recognizing a closed set of pre-defined object classes.
+          Recently, large visual-language models, such as CLIP, have demonstrated impressive capabilities trained solely on internet-scale image-language pairs.
+          Some initial works have shown that these models have the potential to extend 3D scene understanding not only to open set recognition, but also offer additional applications such as affordances, materials, activities, and properties of unseen environments.
+          The goal of this workshop is to bundle these initial siloed efforts and to discuss and establish clear task definitions, evaluation metrics, and benchmark datasets.
+            </div>
+        </div>
+      </section>
+
+    <!-- <section class="section" id="News">
+        <div class="container is-max-desktop content">
+          <h2 class="title">News 📰</h2>
+          <div class="content has-text-justified">
+            <ul>
+              <li><b>April 2023</b>: Workshop website is online.</li>
+            </ul>
+          </div>
+        </div>
+      </section> -->
+
+      <section class="section" id="Invited Speakers">
+        <div class="container is-max-desktop content">
+          <h2 class="title">Invited Speakers 🧑‍🤝‍🧑</h2>
+          <ul>
+            <li><a href="https://www.cs.columbia.edu/~shurans/">Prof. Shuran Song</a></li>
+            <li><a href="https://www.professoren.tum.de/en/dai-angela">Prof. Angela Dai</a></li>
+            <li><a href="https://www.sfu.ca/computing/people/faculty/manolissavva.html">Prof. Manolis Savva</a></li>
+            <li><a href="https://www.cs.princeton.edu/~funk/">Prof. Thomas Funkhouser</a></li>
+            <li><a href="https://itee.uq.edu.au/profile/8084/jen-jen-chung">Prof. Jen Jen Chung</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="Papers">
+        <div class="container is-max-desktop content">
+          <h2 class="title">Important Dates</h2>
+          <ul>
+            <li><b>Paper Track:</b> We accept novel full 8-page papers for publication in the proceedings, and shorter 4-page extended abstracts of either novel or previously published work that will not be included in the proceedings.
+            </li>
+            <ul>
+            <li>Paper Submission Deadline: TBD</li>
+            <li>Notification to Authors: TBD</li>
+            <li>Camera-ready Deadline: TBD</li>
+            </ul>
+            <li>Challenge Track</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+          <h2 class="title">Organizers</h2>
+          <ul>
+            <li><a href="http://francisengelmann.github.io">Francis Engelmann</a></li>
+            <li><a href="https://aycatakmaz.github.io">Ayca Takmaz</a></li>
+            <li><a href="https://jonasschult.github.io">Jonas Schult</a></li>
+            <li><a href="https://github.com/WaldJohannaU">Johanna Wald</a></li>
+            <li><a href="https://github.com/elisabettafedele">Elisabetta Fedele</a></li>
+            <li><a href="https://pengsongyou.github.io">Songyou Peng</a></li>
+            <li><a href="https://xiwang1212.github.io/homepage/">Xi Wang</a></li>
+            <li><a href="https://orlitany.github.io">Or Litany</a></li>
+            <li><a href="https://vlg.inf.ethz.ch/team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a></li>
+            <li><a href="https://federicotombari.github.io">Federico Tombari</a></li>
+            <li><a href="https://people.inf.ethz.ch/marc.pollefeys/">Marc Pollefeys</a></li>
+            <li><a href="https://geometry.stanford.edu/member/guibas/">Leonidas Guibas</a></li>
+          </ul>
+
+
+        </div>
+      </section>
+
+      <!-- <section class="section" id="Sponsors">
+        <div class="container is-max-desktop content">
+          <h2 class="title">Sponsors </h2>
+        </div>
+      </section> -->
+
+      <footer class="footer">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-8">
+              <div class="content">
+                <p>
+                  This website is licensed under a <a rel="license"
+                    href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                    Commons Attribution-ShareAlike 4.0 International License</a>.
+                </p>
+                <p>
+                  It borrows the source code of <a href="https://github.com/nerfies/nerfies.github.io">this website</a>.
+                  We would like to thank Utkarsh Sinha and Keunhong Park.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+</body>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/jquery.mobile.custom.min.js"></script> <!-- Resource jQuery -->
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+
+</html>
