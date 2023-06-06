@@ -29,6 +29,12 @@
       font-size: 120%;
       color: #5c5c5c;
     }
+
+    .button {
+      border-radius: 10px;
+      background: #ffffffd0;
+      padding: 5px 15px 5px 15px;
+    }
   </style>
 </head>
 
@@ -52,15 +58,19 @@
     </div>
   </section>
 
-  <!-- <section class="hero teaser">
+  <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <img src="assets/teaser.jpg" style="max-width:100%" />
         <h2 class="subtitle has-text-centered">
+          <a href="#dates" class="button">Important Dates</a>
+          <a href="#speakers" class="button">Invited Speakers</a>
+          <a href="#relatedwork" class="button">Related Work</a>
+          <a href="#organizers" class="button">Organizers</a>
+
         </h2>
       </div>
     </div>
-  </section> -->
+  </section>
 
   <section class="section">
     <div class="container is-max-desktop">
@@ -84,6 +94,28 @@
         </div>
       </section>
 
+      <section class="section" id="Papers">
+        <div class="container is-max-desktop content">
+          <h2 class="title" id="dates">Important Dates 🗓️</h2>
+          <ul>
+            <li><b>Paper Track</b>: We accept novel full 8-page papers for publication in the proceedings, and shorter
+              4-page extended abstracts of either novel or previously published work that will not be included in the
+              proceedings. All submissions shall follow the <a
+                href="https://iccv2023.thecvf.com/submission.guidelines-361600-2-20-16.php">ICCV 2023 author
+                guidelines.</a>
+            </li>
+            <ul>
+              <li><b>Submission Portal</b>: <a href=" https://cmt3.research.microsoft.com/OpenSUN3D2023">CMT</a></li>
+              <li><b>Paper Submission Deadline</b>: July 20, 2023</li>
+              <li><b>Notification to Authors</b>: August 2, 2023</li>
+              <li><b>Camera-ready submission</b>: August 11, 2023</li>
+            </ul>
+            <li><b>Challenge Track</b>: TBD</li>
+          </ul>
+        </div>
+      </section>
+
+
       <!-- <section class="section" id="News">
         <div class="container is-max-desktop content">
           <h2 class="title">News 📰</h2>
@@ -97,7 +129,7 @@
 
       <section class="section" id="Invited Speakers">
         <div class="container is-max-desktop content">
-          <h2 class="title">Invited Speakers 🧑‍🤝‍🧑</h2>
+          <h2 class="title" id="speakers">Invited Speakers 🧑‍🏫</h2>
           <a href="https://www.cs.columbia.edu/~shurans/">
             <div class="card">
               <div class="card-content">
@@ -239,28 +271,9 @@
         </div>
       </section>
 
-      <section class="section" id="Papers">
-        <div class="container is-max-desktop content">
-          <h2 class="title">Important Dates</h2>
-          <ul>
-            <li><b>Paper Track:</b> We accept novel full 8-page papers for publication in the proceedings, and shorter
-              4-page extended abstracts of either novel or previously published work that will not be included in the
-              proceedings.
-            </li>
-            <ul>
-              <li>Paper Submission Deadline: TBD</li>
-              <li>Notification to Authors: TBD</li>
-              <li>Camera-ready Deadline: TBD</li>
-            </ul>
-            <li>Challenge Track</li>
-          </ul>
-        </div>
-      </section>
-
-
       <section class="section" id="Invited Speakers">
         <div class="container is-max-desktop content">
-          <h2 class="title">Related Works 🧑‍🤝</h2>
+          <h2 class="title" id="relatedwork">Related Works 🧑‍🤝</h2>
           Below is a collection of concurrant and related works in the field of open-set 3D scene understanding. Please
           feel free to get in touch to add other works as well.
           <ul>
@@ -281,7 +294,7 @@
 
       <section class="section" id="Organizers">
         <div class="container is-max-desktop content">
-          <h2 class="title">Organizers</h2>
+          <h2 class="title" id="organizers">Organizers</h2>
           <div class="columns is-centered">
             <div class="column">
               <a href="http://francisengelmann.github.io">
@@ -472,7 +485,7 @@
                   <div class="card-content">
                     <div class="media">
                       <div class="media-content" style="overflow-x: unset;">
-                        <p class="title is-4">Federico Tombario</p>
+                        <p class="title is-4">Federico Tombari</p>
                         <p class="subtitle is-6">TUM, Google</p>
                       </div>
                     </div>
@@ -521,7 +534,6 @@
           </div>
         </div>
       </section>
-
 
       <!-- <section class="section" id="Sponsors">
         <div class="container is-max-desktop content">
