@@ -144,7 +144,8 @@ if __name__ == "__main__":
 
     parser.add_argument(
         "--data_type",
-        choices=["challenge_development_set", "challenge_test_set", "full_training_set"]
+        choices=["challenge_development_set", "challenge_test_set", "full_training_set"],
+        default="challenge_development_set",
     )
 
     parser.add_argument(
@@ -156,13 +157,13 @@ if __name__ == "__main__":
 
     dataset = 'raw'
     if args.data_type == 'challenge_development_set':
-        video_id_csv = 'opensun3d_challenge/benchmark_file_lists/challenge_development_scenes.csv'
+        video_id_csv = 'challenge/benchmark_file_lists/challenge_development_scenes.csv'
         destination_folder = 'ChallengeDevelopmentSet'
     elif args.data_type == 'challenge_test_set':
-        video_id_csv = 'opensun3d_challenge/benchmark_file_lists/challenge_test_scenes.csv'
+        video_id_csv = 'challenge/benchmark_file_lists/challenge_test_scenes.csv'
         destination_folder = 'ChallengeTestSet'
     elif args.data_type == 'full_training_set':
-        video_id_csv = 'opensun3d_challenge/benchmark_file_lists/full_training_scenes.csv'
+        video_id_csv = 'challenge/benchmark_file_lists/full_training_scenes.csv'
         destination_folder = 'FullTrainingSet'
     else:
         raise Exception(f'No such data_type = {args.data_type}')
@@ -171,13 +172,11 @@ if __name__ == "__main__":
                            "lowres_wide", "lowres_wide_intrinsics", "wide", 
                            "wide_intrinsics", "mesh"]
 
-
     df = pd.read_csv(video_id_csv)
     video_ids_ = df["video_id"].to_list()
     video_ids_ = list(map(str, video_ids_))  # Expecting video id to be a string
     splits_ = df["fold"].to_list()
     
-
     download_data(dataset,
                   destination_folder,
                   video_ids_,

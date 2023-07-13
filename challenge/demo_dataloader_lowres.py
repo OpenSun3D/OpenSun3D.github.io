@@ -10,20 +10,20 @@ from benchmark_scripts.opensun3d_challenge_utils import FrameReaderDataLoaderLow
 if __name__=='__main__':
     arkitscenes_root_dir = "data" #"PATH/TO/ARKITSCENES/DOWNLOAD/DIR"
     data_type = "ChallengeDevelopmentSet" # or "ChallengeTestSet"
-    scene_id = "42444514" # an example scene ID
-    scene_id = "42445173" # an example scene ID
-    scene_id = "42445677" # an example scene ID
-    scene_id = "42445935" # an example scene ID
-    scene_id = "42446478" # an example scene ID
+    scene_ids = ['42445173', '42445677', '42445935', '42446478', '42446588']
+    scene_id = scene_ids[4]
     img_folder = 'lowres_wide'
 
     # Set up dataloader
     data_root_dir = os.path.join(arkitscenes_root_dir, data_type)
     scene_dir = os.path.join(data_root_dir, scene_id)
     print(os.path.abspath(scene_dir))
-    loader = FrameReaderDataLoaderLowRes(
-        root_path=scene_dir,
-    )
+    try:
+        loader = FrameReaderDataLoaderLowRes(root_path=scene_dir)
+    except FileNotFoundError:
+        print('>>> Error: Data not found. Did you download it?')
+        print('>>> Try: python download_data_opensun3d.py --data_type=challenge_development_set --download_dir=data')
+        exit()
 
     print("Number of frames to load: ", len(loader))
 
@@ -39,7 +39,7 @@ if __name__=='__main__':
         pose = frame['pose']  # (4,4) - camera pose
         pcd = frame['pcd']  # (n, 3) - backprojected point coordinates in world coordinate system! not camera coordinate system! backprojected and transformed to world coordinate system
         pcd_color = frame['color']  # (n,3) - color values for each point
-        v.add_points(f'rgb;{i}', pcd, pcd_color * 255, point_size=2, visible=True)
+        v.add_points(f'rgb;{i}', pcd, pcd_color * 255, point_size=5, visible=True)
 
     # Draw camera trajectory
     trajectory = []
@@ -51,6 +51,6 @@ if __name__=='__main__':
 
     # Add ARKit Reconstructed Mesh
     pcd = o3d.io.read_point_cloud(os.path.join(scene_dir, f'{scene_id}_3dod_mesh.ply'))
-    v.add_points(f'Mesh ARKit', np.asarray(pcd.points), np.asarray(pcd.colors) * 255, point_size=10, visible=True)
+    v.add_points(f'Mesh ARKit', np.asarray(pcd.points), np.asarray(pcd.colors) * 255, point_size=20, visible=True)
 
-    v.save('opensun3d_demo2')
+    v.save('viz')

@@ -9,14 +9,21 @@ conda activate opensun3d
 pip install pyviz3d numpy pandas opencv-python scipy
 ```
 
-## Download example scene
+## Download repository
 
 ```
-python download_data_opensun3d.py --data_type=challenge_development_set --download_dir=data
+git clone git@github.com:OpenSun3D/OpenSun3D.github.io.git
+cd OpenSun3D.github.io
+```
+
+## Download example scenes
+
+```
+python challenge/download_data_opensun3d.py --data_type=challenge_development_set --download_dir=data
 ```
 
 ## Visualize scene 
 
 ```
-python opensun3d_challenge/demo_dataloader_lowres.py
+python demo_dataloader_lowres.py
 ```
