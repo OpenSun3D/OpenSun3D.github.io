@@ -1,5 +1,5 @@
 # Install
-
+Minimal example to visualize the data.
 
 ## Create virutal environment
 
@@ -22,8 +22,8 @@ cd OpenSun3D.github.io
 python challenge/download_data_opensun3d.py --data_type=challenge_development_set --download_dir=data
 ```
 
-## Visualize scene 
+## Dataload and visualize scene 
 
 ```
-python demo_dataloader_lowres.py
+python challenge/demo_dataloader_lowres.py
 ```
