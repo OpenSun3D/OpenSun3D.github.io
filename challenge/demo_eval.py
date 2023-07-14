@@ -29,7 +29,7 @@ def main(pred_dir, gt_dir):
         # we need to catch cases where no object instances are predicted. for those cases, we produce a pseudo map
         preds[scene_name] = {
             'pred_masks': np.vstack(pred_masks).T if len(pred_masks) > 0 else np.zeros((1, 1)),
-            'pred_scores': np.ones(len(pred_masks)) if len(pred_masks) > 0 else np.zeros(1),
+            'pred_scores': np.vstack(pred_scores) if len(pred_masks) > 0 else np.zeros(1),
             'pred_classes': np.ones(len(pred_masks), dtype=np.int64) if len(pred_masks) > 0 else np.ones(1, dtype=np.int64)
         }
 

@@ -5,11 +5,11 @@ This is the page for the 3D open-vocabulary scene understanding challenge at the
 
 In our workshop competition, we propose the following challenge:
 
->**TASK:** Given an open-vocabulary, text-based query, the aim is to localize and segment the object that fits best with the given prompt, which might describe object properties such as semantics, material type, affordances and situational context.
+>**TASK:** Given an open-vocabulary, text-based query, the aim is to localize and segment the object instances that fit best with the given prompt, which might describe object properties such as semantics, material type, affordances and situational context. 
 
->**INPUT:** An RGB-D sequence and the 3D reconstruction of a given scene represented as a point cloud, camera parameters, and a text-based input query.
+>**INPUT:**  An RGB-D sequence and the 3D reconstruction of a given scene, camera parameters, and a text-based input query.
 
->**OUTPUT:** Binary segmentation of the point cloud, segmenting the object that fits best with the given prompt.
+>**OUTPUT:** Instance segmentation of the point cloud that corresponds to the vertices of the provided 3D mesh reconstruction, segmenting the objects that fit best with the given prompt.
 
 For this challenge, we use the [**ARKitScenes dataset**](https://github.com/apple/ARKitScenes). In this repository, we provide instructions for downloading the data necessary for our challenge, as well as demo/utility scripts that are meant to guide the participants about how to read and use the data. Furthermore, we provide an example evaluation script. 
 
@@ -40,9 +40,7 @@ Our challenge consists of two phases: *Development Phase*, and *Test Phase*.
 In order to download the full training data, you can use the `download_data_opensun3d.py` script. This script takes as argument a csv file that lists the video ids to be downloaded, as well as the dataset assets that we want to download. We provide 3 different csv files at [opensun3d_challenge/benchmark_file_lists](opensun3d_challenge/benchmark_file_lists).
 The ARKitScenes dataset provides many raw data assets, but we are particularly interested in the depth images, RGB images, camera intrinsics, camera trajectory (poses), and the 3D scene reconstrucion.
 
-You can use the following script with the given arguments to download the data (Phase 1 - Challenge Development Set,
-Phase 2 - Challenge Test Set are mandatory.
-Optionally, if you need to train a model, we provide a command to download the original training set):
+You can use the following script with the given arguments to download the data (Phase 1 - Challenge Development Set, Phase 2 - Challenge Test Set are mandatory. Optionally, if you need to train a model, we provide a command to download the original training set):
 
 #### **Phase 1 - Download Challenge Development Set (~5GB)**
 Download the data using
@@ -58,7 +56,7 @@ python3 download_data_opensun3d.py --data_type=challenge_test_set --download_dir
 ```
 Queries for each scene will be made available in [`queries_test_scenes.csv`](opensun3d_challenge/benchmark_file_lists/queries_test_scenes.csv).
 
-#### *(Optional, needed only if you want to train a model) Download Full Training Set (TO-DO - "Several hundreds of GB")*
+#### *(Optional, needed only if you want to train a model) Download Full Training Set (Several hundreds of GBs)*
 ```
 python3 download_data_opensun3d.py --data_type=full_training_set --download_dir PATH/TO/ARKITSCENES/DOWNLOAD/DIR
 ```
@@ -67,14 +65,14 @@ NOTE: If you need to download other assets from the ARKitScenes, please see the 
 
 ---
 ## **Data Organization and Format of Input Data**
-Using the given commands to download the data for Phase 1 and 2 will save a variety of assets in the folder you specified (PATH/TO/ARKITSCENES/DOWNLOAD/DIR).
+Using the given commands to download the data for Phase 1 and 2 will save a variety of assets in the folder you specified (`PATH/TO/ARKITSCENES/DOWNLOAD/DIR`).
 This data folder will include two directories, `ChallengeDevelopmentSet` and `ChallengeTestSet` which includes all assets belonging to challenge development and test data respectively.
 
-For each SCENE_ID, a folder is created with the following structure:
+For each `SCENE_ID`, a folder is created with the following structure:
 
 ```
 PATH/TO/ARKITSCENES/DOWNLOAD/DIR/{ChallengeDevelopmentSet or ChallengeTestSet}/SCENE_ID
-├── {SCENE_ID}_3dod_mesh.ply
+├── {SCENE_ID}_3dod_mesh.ply # reconstructed 3D mesh of the scene
 └── lowres_wide              # RGB images of the wide camera (256x192) - 60 FPS
     ├── 6845.80601079.png    # filenames are indexed by timestamps
     ├── 6845.90596450.png
@@ -96,7 +94,7 @@ PATH/TO/ARKITSCENES/DOWNLOAD/DIR/{ChallengeDevelopmentSet or ChallengeTestSet}/S
     ├── 6845.90596450.png
     └── ...
 └── lowres_wide.traj       # camera trajectory, each line has the pose for a new timestamp
-````
+```
 
 Data formats are described in the following:
 1. `.png` - store RGB images, depth images and confidence images
@@ -120,10 +118,10 @@ You can explore the [`demo_dataloader_lowres.py`](opensun3d_challenge/demo_datal
 ```
     arkitscenes_root_dir = "PATH/TO/ARKITSCENES/DOWNLOAD/DIR
     data_type = "ChallengeDevelopmentSet" # or "ChallengeTestSet"
-    scene_id = "42444514" # an example scene ID
+    scene_id = "42445173" # an example scene ID
 ```
 
-Queries for each scene are available in [`queries_development_scenes.csv`](opensun3d_challenge/benchmark_file_lists/queries_test_scenes.csv). First column is `video_id`, second column is `visit_id` and the last column is the open vocabulary query. 
+Queries for each scene are available in [`queries_development_scenes.csv`](opensun3d_challenge/benchmark_file_lists/queries_test_scenes.csv). First column is `video_id`, second column is `visit_id` and the last column is the open vocabulary query. What we refer to as `{SCENE_ID}` in this document is the `video_id`.
 
 ---
 ## **Submission Instructions**
@@ -146,15 +144,16 @@ submission_opensun3d
 ```
 
 Each prediction file for a scene should contain a list of instances, where an instance is: (1) the relative path to the predicted mask file, (2) the float confidence score. If your method does not produce confidence scores, you can use 1.0 as the confidence score for all masks. Each line in the prediction file should correspond to one instance, and the two values above separated by a space. Thus, the filenames in the prediction files must not contain spaces.
-The predicted instance mask file should provide a mask over the the points provided in the FARO scan, with the original order provided by the `*_faro_pcd.ply` point cloud. Each instance mask file should contain one line per point, with each line containing an integer value, with non-zero values indicating part of the instance. E.g., `42444514.txt` should be of the format:
+The predicted instance mask file should provide a mask over the vertices of the provided scene reconstruction mesh, e.g. `{SCENE_ID}_3dod_mesh.ply`, following the original order of the vertices in this file.
+Each instance mask file should contain one line per point, with each line containing an integer value, with non-zero values indicating part of the instance. For example, a given `{SCENE_ID}.txt` file, e.g.,`42445173.txt`, could look like the following:
 
 ```
-predicted_masks/42444514_000.txt 0.7234
-predicted_masks/42444514_001.txt 0.9038
+predicted_masks/42445173_000.txt 0.7234
+predicted_masks/42445173_001.txt 0.9038
 ⋮
 ```
 
-and `predicted_masks/42444514_000.txt` could look like:
+and `predicted_masks/42445173_000.txt` could look like:
 ```
 0
 0
