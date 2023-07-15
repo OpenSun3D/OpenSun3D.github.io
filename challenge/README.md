@@ -49,7 +49,7 @@ python3 download_data_opensun3d.py --data_type=challenge_development_set --downl
 ```
 Queries for each scene are available in [`queries_development_scenes.csv`](benchmark_file_lists/queries_test_scenes.csv).
 
-Furthermore, we provide ground truth instance masks for the development scenes [here](data/gt_development_scenes). Please note that submission of the predicted masks require a different file format, explained in more detail [here](#submission-instructions).
+Furthermore, we provide ground truth instance masks for the development scenes [here](benchmark_data/gt_development_scenes), whose data format is explained [here](benchmark_data/gt_data_format.md). Please note that submission of the predicted masks require a different file format, explained in more detail [here](#submission-instructions).
 
 #### **Phase 2 - Download Challenge Test Set (~30GB)**
 >NOTE: Data for this phase will be made available for downloading in August 2023, this will be announced on our website.
