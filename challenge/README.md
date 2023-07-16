@@ -45,7 +45,7 @@ You can use the following script with the given arguments to download the data (
 #### **Phase 1 - Download Challenge Development Set (~5GB)**
 Download the data using
 ```
-python3 download_data_opensun3d.py --data_type=challenge_development_set --download_dir PATH/TO/ARKITSCENES/DOWNLOAD/DIR
+python3 challenge/download_data_opensun3d.py --data_type=challenge_development_set --download_dir PATH/TO/ARKITSCENES/DOWNLOAD/DIR
 ```
 Queries for each scene are available in [`queries_development_scenes.csv`](benchmark_file_lists/queries_test_scenes.csv).
 
@@ -54,13 +54,13 @@ Furthermore, we provide ground truth instance masks for the development scenes [
 #### **Phase 2 - Download Challenge Test Set (~30GB)**
 >NOTE: Data for this phase will be made available for downloading in August 2023, this will be announced on our website.
 ```
-python3 download_data_opensun3d.py --data_type=challenge_test_set --download_dir PATH/TO/ARKITSCENES/DOWNLOAD/DIR
+python3 challenge/download_data_opensun3d.py --data_type=challenge_test_set --download_dir PATH/TO/ARKITSCENES/DOWNLOAD/DIR
 ```
 Queries for each scene will be made available in [`queries_test_scenes.csv`](benchmark_file_lists/queries_test_scenes.csv).
 
 #### *(Optional, needed only if you want to train a model) Download Full Training Set (Several hundreds of GBs)*
 ```
-python3 download_data_opensun3d.py --data_type=full_training_set --download_dir PATH/TO/ARKITSCENES/DOWNLOAD/DIR
+python3 challenge/download_data_opensun3d.py --data_type=full_training_set --download_dir PATH/TO/ARKITSCENES/DOWNLOAD/DIR
 ```
 
 NOTE: If you need to download other assets from the ARKitScenes, please see the [data instructions](https://github.com/apple/ARKitScenes/blob/main/DATA.md) in the [original ARKitScenes repository](https://github.com/apple/ARKitScenes) for further details.  For this challenge, in order to develop or train your model, you can only use the scenes provided in the ARKitScenes Training set or the Development set we provide.
