@@ -1,5 +1,5 @@
 # Based on https://github.com/apple/ARKitScenes/blob/main/threedod/benchmark_scripts/data_prepare_online.py
-# Adapted by Ayca Takmaz, July 2023
+# Adapted, July 2023
 
 import os
 import numpy as np
@@ -10,7 +10,7 @@ from benchmark_scripts.opensun3d_challenge_utils import FrameReaderDataLoaderLow
 if __name__=='__main__':
     arkitscenes_root_dir = "data" #"PATH/TO/ARKITSCENES/DOWNLOAD/DIR"
     data_type = "ChallengeDevelopmentSet" # or "ChallengeTestSet"
-    scene_ids = ['42445173', '42445677', '42445935', '42446478', '42446588']
+    scene_ids = ['42445173', '42445677', '42445935', '42446478', '42446588'] # Dev Scenes
     scene_id = scene_ids[4]
     img_folder = 'lowres_wide'
 
