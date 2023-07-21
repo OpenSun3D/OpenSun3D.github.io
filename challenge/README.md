@@ -63,6 +63,12 @@ Queries for each scene will be made available in [`queries_test_scenes.csv`](ben
 python3 challenge/download_data_opensun3d.py --data_type=full_training_set --download_dir PATH/TO/ARKITSCENES/DOWNLOAD/DIR
 ```
 
+Some of these scenes do not have `wide` assets (see below). If you want to download only the training scenes that have `wide` assets, you can alternatively run the following command:
+
+```
+python3 challenge/download_data_opensun3d.py --data_type=full_training_set_w_wide_assets --download_dir PATH/TO/ARKITSCENES/DOWNLOAD/DIR
+```
+
 NOTE: If you need to download other assets from the ARKitScenes, please see the [data instructions](https://github.com/apple/ARKitScenes/blob/main/DATA.md) in the [original ARKitScenes repository](https://github.com/apple/ARKitScenes) for further details.  For this challenge, in order to develop or train your model, you can only use the scenes provided in the ARKitScenes Training set or the Development set we provide.
 
 ---
