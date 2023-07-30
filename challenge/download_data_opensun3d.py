@@ -144,7 +144,7 @@ if __name__ == "__main__":
 
     parser.add_argument(
         "--data_type",
-        choices=["challenge_development_set", "challenge_test_set", "full_training_set"],
+        choices=["challenge_development_set", "challenge_test_set", "full_training_set", "full_training_set_w_wide_assets"],
         default="challenge_development_set",
     )
 
@@ -165,6 +165,9 @@ if __name__ == "__main__":
     elif args.data_type == 'full_training_set':
         video_id_csv = 'challenge/benchmark_file_lists/full_training_scenes.csv'
         destination_folder = 'FullTrainingSet'
+    elif args.data_type == 'full_training_set_w_wide_assets':
+        video_id_csv = 'challenge/benchmark_file_lists/full_training_scenes_w_wide_assets.csv'
+        destination_folder = 'FullTrainingSetWithWideAssets'
     else:
         raise Exception(f'No such data_type = {args.data_type}')
 
