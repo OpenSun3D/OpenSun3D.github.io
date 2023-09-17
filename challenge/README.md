@@ -32,7 +32,7 @@ Our challenge consists of two phases: *Development Phase*, and *Test Phase*.
 
 - In the first phase, the *Development Phase*, the challenge participants can download and use the whole *Training* split of the ARKitScenes dataset for their experiments. From these *Training* scenes, we annotate a few example scenes for development purposes. More specifically, for each example scene, we first specify an open-vocabulary query, and then manually annotate objects corresponding to the given query, by segmenting them in the point cloud of the given scene. We refer to this subset as the *Challenge Development* set. The participants can upload their predictions on scenes from the *Challenge Development* set to the [Phase 1 - Development Benchmark](https://eval.ai/web/challenges/challenge-page/2102/submission) in the challenge website.
 
-- In the second phase, the *Test Phase*, we provide a subset of scenes from the *Validation* split of the ARKitScenes dataset, we refer to this subset as the *Challenge Test* set. For each of these scenes, we provide an input text-query. The participants are expected to upload their predictions for each scene from the *Challenge Test* to the [Phase 2 - Test Benchmark](https://eval.ai/web/challenges/challenge-page/2102/submission) in the challenge website. Data for this phase will be made available for downloading in August 2023, this will be announced on our website.
+- In the second phase, the *Test Phase*, we provide a subset of scenes from the *Validation* split of the ARKitScenes dataset, we refer to this subset as the *Challenge Test* set. For each of these scenes, we provide an input text-query. The participants are expected to upload their predictions for each scene from the *Challenge Test* to the [Phase 2 - Test Benchmark](https://eval.ai/web/challenges/challenge-page/2102/submission) in the challenge website.
 
 
 ### **Download Instructions**
@@ -47,16 +47,15 @@ Download the data using
 ```
 python3 challenge/download_data_opensun3d.py --data_type=challenge_development_set --download_dir PATH/TO/ARKITSCENES/DOWNLOAD/DIR
 ```
-Queries for each scene are available in [`queries_development_scenes.csv`](benchmark_file_lists/queries_test_scenes.csv).
+Queries for each scene are available in [`queries_development_scenes.csv`](benchmark_file_lists/queries_development_scenes.csv).
 
 Furthermore, we provide ground truth instance masks for the development scenes [here](benchmark_data/gt_development_scenes), whose data format is explained [here](benchmark_data/gt_data_format.md). Please note that submission of the predicted masks require a different file format, explained in more detail [here](#submission-instructions).
 
 #### **Phase 2 - Download Challenge Test Set (~30GB)**
->NOTE: Data for this phase will be made available for downloading in August 2023, this will be announced on our website.
 ```
 python3 challenge/download_data_opensun3d.py --data_type=challenge_test_set --download_dir PATH/TO/ARKITSCENES/DOWNLOAD/DIR
 ```
-Queries for each scene will be made available in [`queries_test_scenes.csv`](benchmark_file_lists/queries_test_scenes.csv).
+Queries for each scene are available in [`queries_test_scenes.csv`](benchmark_file_lists/queries_test_scenes.csv).
 
 #### *(Optional, needed only if you want to train a model) Download Full Training Set (Several hundreds of GBs)*
 ```
@@ -69,7 +68,7 @@ Some of these scenes do not have `wide` assets (see below). If you want to downl
 python3 challenge/download_data_opensun3d.py --data_type=full_training_set_w_wide_assets --download_dir PATH/TO/ARKITSCENES/DOWNLOAD/DIR
 ```
 
-NOTE: If you need to download other assets from the ARKitScenes, please see the [data instructions](https://github.com/apple/ARKitScenes/blob/main/DATA.md) in the [original ARKitScenes repository](https://github.com/apple/ARKitScenes) for further details.  For this challenge, in order to develop or train your model, you can only use the scenes provided in the ARKitScenes Training set or the Development set we provide.
+NOTE: If you need to download other assets from the ARKitScenes, please see the [data instructions](https://github.com/apple/ARKitScenes/blob/main/DATA.md) in the [original ARKitScenes repository](https://github.com/apple/ARKitScenes) for further details.
 
 ---
 ## **Data Organization and Format of Input Data**
@@ -129,7 +128,7 @@ You can explore the [`demo_dataloader_lowres.py`](demo_dataloader_lowres.py) fil
     scene_id = "42445173" # an example scene ID
 ```
 
-Queries for each scene are available in [`queries_development_scenes.csv`](obenchmark_file_lists/queries_test_scenes.csv). First column is `video_id`, second column is `visit_id` and the last column is the open vocabulary query. What we refer to as `{SCENE_ID}` in this document is the `video_id`.
+Queries for each development scene are available in [`queries_development_scenes.csv`](benchmark_file_lists/queries_development_scenes.csv), and queries for each test scene are available in [`queries_test_scenes.csv`](benchmark_file_lists/queries_test_scenes.csv). First column is `video_id`, second column is `visit_id` and the last column is the open vocabulary query. What we refer to as `{SCENE_ID}` in this document is the `video_id`.
 
 ---
 ## **Submission Instructions**
