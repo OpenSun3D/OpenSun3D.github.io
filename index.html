@@ -35,12 +35,29 @@
       background: #ffffffd0;
       padding: 5px 15px 5px 15px;
     }
+
+    .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  /* background-color: #f9f9f9; */
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 5px 15px 5px 15px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
   </style>
 </head>
 
 <body>
-
-
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
@@ -53,10 +70,6 @@
             <h1 class="is-is-5" style="color: #5c5c5c;">in conjunction with CVPR 2024, Seattle, USA.</h1>
             <!-- <b>Room E06 - Oct. 3rd Tuesday Afternoon</b> -->
             <br>
-            <br>
-            <!-- <strong>Zoom link:</strong> 
-            <a href=""></a> -->
-
           </div>
         </div>
       </div>
@@ -69,16 +82,21 @@
       <div class="hero-body">
         <h2 class="subtitle has-text-centered">
           <a href="#schedule" class="button">Schedule</a>
-          <a href="#speakers" class="button">Invited Speakers</a>
+          <a href="#speakers" class="button">Speakers</a>
           <a href="#relatedwork" class="button">Related Work</a>
-          <a href="#dates" class="button">Important Dates</a>
+          <a href="#dates" class="button">Dates</a>
           <!-- <a href="#accepted" class="button">Accepted Papers</a> -->
           <a href="#organizers" class="button">Organizers</a>
+          <div class="dropdown">
+            <span class="button"><i class="fa fa-bars"></i></span>
+            <div class="dropdown-content">
+              <a href="index.html">CVPR 2024</a>
+              <a href="index_iccv23.html">ICCV 2023</a>
+          </div>
         </h2>
-        <h3 class="subtitle has-text-centered">
-          <a href="index_iccv23.html" class="button">1. Workshop OpenSUN3D</a>
-          <a href="index.html" class="button">2. Workshop OpenSUN3D</a>
-        </h3>
+        <!-- <h3 class="subtitle has-text-centered">
+
+        </h3> -->
       </div>
     </div>
   </section>
@@ -175,34 +193,111 @@
           <section class="section" id="Invited Speakers">
             <div class="container is-max-desktop content">
               <h2 class="title" id="speakers">Invited Speakers 🧑‍🏫</h2>
-              will be announced soon
 
-
-              <!-- <a href="https://engineering.jhu.edu/vpatel36/">
+            <a href="https://www.cs.utexas.edu/users/grauman/" target="_blank">
             <div class="card">
               <div class="card-content">
-
                 <div class="columns is-vcentered">
                   <div class="column is-one-quarter">
                     <figure class="image is-128x128">
-                      <img class="is-rounded" src="./static/img/vishal.jpeg" alt="Placeholder image">
+                      <img class="is-rounded" src="static/img/kristen.jpg">
                     </figure>
                   </div>
                   <div class="column">
-                    <p class="title is-4">Professor Vishal Patel</p>
-                    <p class="subtitle is-6">Johns Hopkins University</p>
+                    <p class="title is-4">Kristen Grauman</p>
+                    <p class="subtitle is-6">University of Texas at Austin</p>
                   </div>
                 </div>
-
                 <div class="content">
-                  Vishal M. Patel is an associate professor of electrical and computer engineering and a member of the Vision and Image Understanding Lab. His research interests are focused on computer vision, machine learning, image processing, medical image analysis, and biometrics.
-Patel is an associate editor of the IEEE Transactions on Pattern Analysis and Machine Intelligence journal and chairs the conference subcommittee of IAPR Technical Committee on Biometrics (TC4).
-He has received a number of awards including the 2021 IEEE Signal Processing Society (SPS) Pierre-Simon Laplace Early Career Technical Achievement Award, the 2021 NSF CAREER Award, the 2021 IAPR Young Biometrics Investigator Award (YBIA), the 2016 ONR Young Investigator Award, and the 2016 Jimmy Lin Award for Invention.
+                  Kristen Grauman is a Professor in the Department of Computer Science at the University of Texas at Austin and a Research Director in Facebook AI Research (FAIR).
+                  Her research in computer vision and machine learning focuses on video, visual recognition, and action for perception or embodied AI.
+                  Before joining UT-Austin in 2007, she received her Ph.D. at MIT.
+                  She is an IEEE Fellow, AAAI Fellow, Sloan Fellow, a Microsoft Research New Faculty Fellow, and a recipient of NSF CAREER and ONR Young Investigator awards,
+                  the PAMI Young Researcher Award in 2013, the 2013 Computers and Thought Award from the International Joint Conference on Artificial Intelligence (IJCAI),
+                  the Presidential Early Career Award for Scientists and Engineers (PECASE) in 2013.
+                  She was inducted into the UT Academy of Distinguished Teachers in 2017.
+                  She and her collaborators have been recognized with several Best Paper awards in computer vision, including a 2011 Marr Prize and a 2017 Helmholtz Prize (test of time award).
                 </div>
               </div>
             </div>
           </a>
-           <br />
+
+          <a href="https://people.eecs.berkeley.edu/~kanazawa/" target="_blank">
+            <div class="card">
+              <div class="card-content">
+                <div class="columns is-vcentered">
+                  <div class="column is-one-quarter">
+                    <figure class="image is-128x128">
+                      <img class="is-rounded" src="static/img/angjoo.jpg">
+                    </figure>
+                  </div>
+                  <div class="column">
+                    <p class="title is-4">Angjoo Kanazawa</p>
+                    <p class="subtitle is-6">University of California, Berkeley</p>
+                  </div>
+                </div>
+                <div class="content">
+                  Angjoo Kanazawa is an Assistant Professor in the Department of Electrical Engineering and Computer Sciences at the University of California, Berkeley.
+                  She leads the Kanazawa AI Research (KAIR) lab under BAIR, and serves on the advisory board of Wonder Dynamics.
+                  Previously, she was a Research Scientist at Google Research, and BAIR postdoc at UC Berkeley advised by Jitendra Malik, Alexei A. Efros and Trevor Darrell.
+                  She completed her PhD in Computer Science at the University of Maryland, College Park with my advisor David Jacobs.
+                  During her PhD, she was a visitor at the Max Planck Institute in Tübingen, Germany under the guidance of Michael Black.
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://shurans.github.io" target="_blank">
+            <div class="card">
+              <div class="card-content">
+                <div class="columns is-vcentered">
+                  <div class="column is-one-quarter">
+                    <figure class="image is-128x128">
+                      <img class="is-rounded" src="static/img/shuran.jpg">
+                    </figure>
+                  </div>
+                  <div class="column">
+                    <p class="title is-4">Shuran Song</p>
+                    <p class="subtitle is-6">University of Texas at Austin</p>
+                  </div>
+                </div>
+                <div class="content">
+                  Shuran Song is an Assistant Professor of Electrical Engineering, by courtesy, of Computer Science at Stanford University
+                  and Adjunct Associate Professor of Computer Science at Columbia University.
+                  Prof. Song leads the Robotics and Embodied AI Lab at Stanford University(REAL@Stanford).
+                  She is interested in developing algorithms that enable intelligent systems to learn from their interactions with the physical world,
+                  and autonomously acquire the perception and manipulation skills necessary to execute complex tasks and assist people.
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://cpaxton.github.io/about/" target="_blank">
+            <div class="card">
+              <div class="card-content">
+                <div class="columns is-vcentered">
+                  <div class="column is-one-quarter">
+                    <figure class="image is-128x128">
+                      <img class="is-rounded" src="static/img/chris.jpg">
+                    </figure>
+                  </div>
+                  <div class="column">
+                    <p class="title is-4">Chris Paxton</p>
+                    <p class="subtitle is-6">FAIR</p>
+                  </div>
+                </div>
+                <div class="content">
+                  Chris Paxton is a robotics research scientist at the Embodied AI team at FAIR Labs.
+                  He is interested in ways we can allow robots to work alongside humans to perform complex, multi-step tasks, using a combination of learning and planning.
+                  Chris got his PhD in Computer Science in 2018 from the Johns Hopkins University in Baltimore, Maryland, focusing on using learning to create powerful task and motion planning capabilities for robots operating in human environments.
+                  His work has looked at how he can make robots into useful, general-purposem mobile manipulators in homes.
+                  In particular, Chris pushed a challenge we called open-vocabulary mobile manipulation, or OVMM, which says robots should be able to pick and place any object in any environment.
+                </div>
+              </div>
+            </div>
+          </a>
+
+           <br /><!--
           <a href="https://www.professoren.tum.de/en/dai-angela">
             <div class="card">
               <div class="card-content">
@@ -375,7 +470,7 @@ He has received a number of awards including the 2021 IEEE Signal Processing Soc
                   shorter
                   4-page extended abstracts of either novel or previously published work that will not be included in
                   the
-                  proceedings. All submissions shall follow the <a
+                  proceedings. All submissions have to follow the <a
                     href="https://cvpr.thecvf.com/Conferences/2024/AuthorGuidelines">CVPR 2024 author
                     guidelines.</a>
                 </li>
@@ -404,7 +499,7 @@ He has received a number of awards including the 2021 IEEE Signal Processing Soc
               <h2 class="title" id="organizers">Organizers</h2>
 
               <div class="columns is-centered is-variable is-0">
-                <div class="column is-one-fifth">
+                <div class="column is-one-quarter">
                   <a href="http://francisengelmann.github.io">
                     <div class="card">
                       <div class="card-image">
@@ -423,7 +518,7 @@ He has received a number of awards including the 2021 IEEE Signal Processing Soc
                     </div>
                   </a>
                 </div>
-                <div class="column is-one-fifth">
+                <div class="column is-one-quarter">
                   <a href="https://aycatakmaz.github.io">
                     <div class="card">
                       <div class="card-image">
@@ -442,7 +537,7 @@ He has received a number of awards including the 2021 IEEE Signal Processing Soc
                     </div>
                   </a>
                 </div>
-                <div class="column is-one-fifth">
+                <div class="column is-one-quarter">
                   <a href="https://jonasschult.github.io">
                     <div class="card">
                       <div class="card-image">
@@ -462,8 +557,7 @@ He has received a number of awards including the 2021 IEEE Signal Processing Soc
                     </div>
                   </a>
                 </div>
-
-                <div class="column is-one-fifth">
+                <div class="column is-one-quarter">
                   <a href="https://github.com/elisabettafedele">
                     <div class="card">
                       <div class="card-image">
@@ -483,7 +577,10 @@ He has received a number of awards including the 2021 IEEE Signal Processing Soc
                   </a>
                 </div>
 
-                <div class="column is-one-fifth">
+              </div>
+              <div class="columns is-centered is-variable is-0">
+
+                <div class="column is-one-quarter">
                   <a href="https://alexdelitzas.github.io/">
                     <div class="card">
                       <div class="card-image">
@@ -503,10 +600,8 @@ He has received a number of awards including the 2021 IEEE Signal Processing Soc
                   </a>
                 </div>
 
-              </div>
 
-              <div class="columns is-centered is-variable is-0">
-                <div class="column is-one-fifth">
+                <div class="column is-one-quarter">
                   <a href="https://github.com/WaldJohannaU">
                     <div class="card">
                       <div class="card-image">
@@ -525,7 +620,7 @@ He has received a number of awards including the 2021 IEEE Signal Processing Soc
                     </div>
                   </a>
                 </div>
-                <div class="column is-one-fifth">
+                <div class="column is-one-quarter">
                   <a href="https://pengsongyou.github.io">
                     <div class="card">
                       <div class="card-image">
@@ -544,7 +639,7 @@ He has received a number of awards including the 2021 IEEE Signal Processing Soc
                     </div>
                   </a>
                 </div>
-                <div class="column is-one-fifth">
+                <div class="column is-one-quarter">
                   <a href="https://xiwang1212.github.io/homepage/">
                     <div class="card">
                       <div class="card-image">
@@ -563,7 +658,12 @@ He has received a number of awards including the 2021 IEEE Signal Processing Soc
                     </div>
                   </a>
                 </div>
-                <div class="column is-one-fifth">
+
+              </div>
+              <div class="columns is-centered is-variable is-0">
+
+
+                <div class="column is-one-quarter">
                   <a href="https://orlitany.github.io">
                     <div class="card">
                       <div class="card-image">
@@ -582,8 +682,7 @@ He has received a number of awards including the 2021 IEEE Signal Processing Soc
                     </div>
                   </a>
                 </div>
-
-                <div class="column is-one-fifth">
+                <div class="column is-one-quarter">
                   <a href="https://paschalidoud.github.io">
                     <div class="card">
                       <div class="card-image">
@@ -594,7 +693,7 @@ He has received a number of awards including the 2021 IEEE Signal Processing Soc
                       <div class="card-content">
                         <div class="media">
                           <div class="media-content" style="overflow-x: unset;">
-                            <p class="title is-7 is-spaced">Despoina Paschalidou</p>
+                            <p class="title is-7 is-spaced">Despi Paschalidou</p>
                             <p class="subtitle is-7">Stanford University</p>
                           </div>
                         </div>
@@ -603,11 +702,8 @@ He has received a number of awards including the 2021 IEEE Signal Processing Soc
                   </a>
                 </div>
 
-              </div>
-
-              <div class="columns is-centered is-variable is-0">
-
-                <div class="column is-one-fifth">
+                
+                <div class="column is-one-quarter">
                   <a href="https://federicotombari.github.io">
                     <div class="card">
                       <div class="card-image">
@@ -626,7 +722,7 @@ He has received a number of awards including the 2021 IEEE Signal Processing Soc
                     </div>
                   </a>
                 </div>
-                <div class="column is-one-fifth">
+                <div class="column is-one-quarter">
                   <a href="https://people.inf.ethz.ch/marc.pollefeys/">
                     <div class="card">
                       <div class="card-image">
@@ -645,7 +741,8 @@ He has received a number of awards including the 2021 IEEE Signal Processing Soc
                     </div>
                   </a>
                 </div>
-                <div class="column is-one-fifth">
+
+                <!-- <div class="column is-one-fifth">
                   <a href="https://geometry.stanford.edu/member/guibas/">
                     <div class="card">
                       <div class="card-image">
@@ -663,7 +760,8 @@ He has received a number of awards including the 2021 IEEE Signal Processing Soc
                       </div>
                     </div>
                   </a>
-                </div>
+                </div> -->
+
               </div>
             </div>
           </section>

@@ -35,6 +35,25 @@
       background: #ffffffd0;
       padding: 5px 15px 5px 15px;
     }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      /* background-color: #f9f9f9; */
+      min-width: 140px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      padding: 5px 15px 5px 15px;
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
   </style>
 </head>
 
@@ -54,7 +73,6 @@
             <b>Room E06 - Oct. 3rd Tuesday Afternoon</b>
             <br>
 
-
           </div>
         </div>
       </div>
@@ -67,15 +85,18 @@
       <div class="hero-body">
         <h2 class="subtitle has-text-centered">
           <a href="#schedule" class="button">Schedule</a>
-          <a href="#speakers" class="button">Invited Speakers</a>
+          <a href="#speakers" class="button">Speakers</a>
           <a href="#relatedwork" class="button">Related Work</a>
-          <a href="#dates" class="button">Important Dates</a>
-          <div style="line-height:30%;">
-            <br>
-          </div>
-          <a href="#accepted" class="button">Accepted Papers</a>
-          <a href="#challengeresults" class="button">Challenge Results</a>
+          <a href="#dates" class="button">Dates</a>
+          <a href="#accepted" class="button">Papers</a>
+          <a href="#challengeresults" class="button">Challenge</a>
           <a href="#organizers" class="button">Organizers</a>
+          <div class="dropdown">
+            <span class="button"><i class="fa fa-bars"></i></span>
+            <div class="dropdown-content">
+              <a href="index.html">CVPR 2024</a>
+              <a href="index_iccv23.html">ICCV 2023</a>
+          </div>
         </h2>
       </div>
     </div>
@@ -1041,4 +1062,8 @@
 <script src="js/jquery.mobile.custom.min.js"></script> <!-- Resource jQuery -->
 <script src="js/main.js"></script> <!-- Resource jQuery -->
 
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> ea8bf6c040240009a1fc8aa2bb4f6c61c31c5eee
