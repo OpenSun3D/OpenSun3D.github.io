@@ -3,12 +3,11 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Mask3D">
   <meta name="keywords" content="OpenSun3D">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Open☀️3D </title>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Nunito|Google+Sans|Noto+Sans|Castoro" rel="stylesheet"> -->
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
@@ -49,6 +48,8 @@
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
       padding: 5px 15px 5px 15px;
       z-index: 1;
+      text-align: left;
+      color: black;
     }
 
     .dropdown:hover .dropdown-content {
@@ -60,16 +61,16 @@
 <body>
 
   <section class="hero">
-    <div class="hero-body">
+    <div class="hero-body" style="background-color: #1C2D59">
+      
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">☀️ OpenSUN 3D 🌍<br />
-              <p class="title is-3 publication-title">3<sup>rd</sup> Workshop on Open-Vocabulary 3D Scene Understanding
-              </p>
-            </h1>
-            <h1 class="is-is-5" style="color: #5c5c5c;">in conjunction with ECCV 2024, Milan, Italy.</h1>
-            <b>September 29, Sunday Afternoon</b>
+            <h1 class="title is-1 publication-title" style="color: white">OpenSUN3D</h1>
+            <p class="title is-4" style="color: white">3<sup>rd</sup> Workshop on <br>Open-Vocabulary 3D Scene Understanding</p>
+            
+            <h1 class="is-is-5" style="color: white">in conjunction with ECCV 2024 in Milan, Italy.</h1>
+            <b style="color: white">September 29, Sunday Afternoon</b>
             <br>
           </div>
         </div>
@@ -77,7 +78,7 @@
     </div>
   </section>
 
-  <section class="hero teaser">
+  <section class="hero teaser" style="margin-top: 25px">
     <div class="container is-max-desktop">
       <div class="hero-body">
         <h2 class="subtitle has-text-centered">
@@ -88,7 +89,7 @@
           <a href="#dates" class="button">Dates</a>
           <a href="#organizers" class="button">Organizers</a>
           <div class="dropdown">
-            <span class="button"><i class="fa fa-bars"></i></span>
+            <span class="button">All Editions &nbsp;<i class="fa fa-chevron-down" aria-hidden="true"></i></span>
             <div class="dropdown-content">
               <a href="index.html">ECCV 2024</a>
               <a href="index_cvpr24.html">CVPR 2024</a>
@@ -101,26 +102,24 @@
     </div>
   </section>
 
-    <div class="container is-max-desktop">
-      <section class="section" id="Motivation">
-        <div class="container is-max-desktop content">
-          <h2 class="title">Motivation 💡</h2>
-          <div class="content has-text-justified">
-            The ability to perceive, understand and interact with arbitrary 3D environments is a long-standing goal in
-            both academia and industry with applications in AR/VR as well as robotics.
-            Current 3D scene understanding models are largely limited to recognizing a closed set of pre-defined object
-            classes.
-            Recently, large visual-language models, such as CLIP, have demonstrated impressive capabilities trained
-            solely on internet-scale image-language pairs.
-            Some initial works have shown that these models have the potential to extend 3D scene understanding not only
-            to open set recognition, but also offer additional applications such as affordances, materials, activities,
-            and properties of unseen environments.
-            The goal of this workshop is to bundle these initial siloed efforts and to discuss and establish clear task
-            definitions, evaluation metrics, and benchmark datasets.
-          </div>
-        </div>
-      </section>
-      </div> 
+  <section class="section" id="Motivation">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Introduction</h2>
+      <div class="content has-text-justified">
+        The ability to perceive, understand and interact with arbitrary 3D environments is a long-standing goal in
+        research with applications in AR/VR, health, robotics and so on.
+        Current 3D scene understanding models are largely limited to low-level recognition tasks such as object detection or semantic segmentation,
+        and do not generalize well beyond the a pre-defined set of training labels.
+        More recently, large visual-language models (VLM), such as CLIP, have demonstrated impressive capabilities trained
+        solely on internet-scale image-language pairs.
+        Some initial works have shown that these models have the potential to extend 3D scene understanding not only
+        to open set recognition, but also offer additional applications such as affordances, materials, activities,
+        and properties of unseen environments.
+        The goal of this workshop is to bundle these efforts and to discuss and establish clear task
+        definitions, evaluation metrics, and benchmark datasets.
+      </div>
+    </div>
+  </section>
 
   <!-- <section class="section" style="margin-top: -50px">
     <div class="container is-max-desktop">
@@ -196,512 +195,519 @@
     </div>
   </section> -->
       
-      <section class="section" style="margin-top: -50px">
-        <div class="container is-max-desktop">
-          <section class="section" id="schedule">
-            <div class="container is-max-desktop content">
-              <h2 class="title">Schedule ⏰ (tentative)</h2>
-              <div class="content has-text-justified">
-                <table class="table table-striped">
-                  <tr>
-                    <td width="130">13:30 - 13:45</td>
-                    <td width="300" style="background-color:#e4ffc2">Welcome & Introduction</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>13:45 - 14:15</td>
-                    <td style="background-color:#cae1ff">Keynote 1 <b></b></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>14:15 - 14:45</td>
-                    <td style="background-color:#cae1ff">Keynote 2 <b></b></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>14:45 - 15:00</td>
-                    <td style="background-color:#cae1ff">Winner Presentations<b></b></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>15:00 - 15:45</td>
-                    <td style="background-color:#ffe0c6">Poster Session & Coffee Break</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>15:45 - 16:15</td>
-                    <td style="background-color:#cae1ff">Keynote 3 <b></b></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>16:15 - 16:45</td>
-                    <td style="background-color:#cae1ff">Keynote 4 <b></b></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>16:45 - 17:30</td>
-                    <td style="background-color:#e4ffc2">Panel Discussion & Closing</td>
-                    <td></td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section" id="Invited Speakers">
-            <div class="container is-max-desktop content">
-              <h2 class="title" id="speakers">Invited Speakers 🧑‍🏫</h2>
 
-              <a href="https://research.nvidia.com/labs/dvl/author/laura-leal-taixe/" target="_blank">
-                <div class="card">
-                  <div class="card-content">
-                    <div class="columns is-vcentered">
-                      <div class="column is-one-quarter">
-                        <figure class="image is-128x128">
-                          <img class="is-rounded" src="https://media.licdn.com/dms/image/C5603AQGDojnfVGAteg/profile-displayphoto-shrink_800_800/0/1519572649807?e=1722470400&v=beta&t=ElYm2iHF3Mcm5euA6ZOpRZJOjh8b1p39v8kTpBp4IoU">
-                        </figure>
-                      </div>
-                      <div class="column">
-                        <p class="title is-4">Laura Leal-Taixé</p>
-                        <p class="subtitle is-6">Senior Research Manager at NVIDIA</p>
-                      </div>
-                    </div>
-                    <div class="content">
-                      Dr. Laura Leal-Taixé is a Senior Research Manager at NVIDIA and also an Adjunct Professor at the Technical University of Munich (TUM),
-                      leading the Dynamic Vision and Learning group. From 2018 until 2022, she was a tenure-track professor at TUM.
-                      Before that, she spent two years as a postdoctoral researcher at ETH Zurich, Switzerland, and a year as a senior postdoctoral researcher in the Computer Vision Group
-                      at the Technical University in Munich. She obtained her PhD from the Leibniz University of Hannover in Germany, spending a year as a visiting scholar at the University
-                      of Michigan, Ann Arbor, USA. She pursued B.Sc. and M.Sc. in Telecommunications Engineering at the Technical University of Catalonia (UPC) in her native city of Barcelona.
-                      She went to Boston, USA to do her Masters Thesis at Northeastern University with a fellowship from the Vodafone foundation.
-                      She is a recipient of the Sofja Kovalevskaja Award of 1.65 million euros in 2017, the Google Faculty Award in 2021, and the ERC Starting Grant in 2022.
-                    </div>
-                  </div>
-                </div>
-              </a>
+  <section class="section" id="schedule">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Schedule</h2>
+      <div class="content has-text-justified">
+        <table class="table table-striped">
+          <tr>
+            <td width="130">13:30 - 13:45</td>
+            <td width="300" style="background-color: #ddadef37">Welcome & Introduction</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>13:45 - 14:15</td>
+            <td style="background-color:#8cd8fb72">Keynote 1 <b></b></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>14:15 - 14:45</td>
+            <td style="background-color:#8cd8fb72">Keynote 2 <b></b></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>14:45 - 15:00</td>
+            <td style="background-color:#8cd8fb72">Winner Presentations<b></b></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>15:00 - 15:45</td>
+            <td style="background-color: #ddadef37">Poster Session & Coffee Break</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>15:45 - 16:15</td>
+            <td style="background-color:#8cd8fb72">Keynote 3 <b></b></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>16:15 - 16:45</td>
+            <td style="background-color:#8cd8fb72">Keynote 4 <b></b></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>16:45 - 17:30</td>
+            <td style="background-color: #ddadef37">Concluding Remarks</td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+    
+      <section class="section" id="Invited Speakers">
+        <div class="container is-max-desktop content">
+          <h2 class="title" id="speakers">Keynote Speakers</h2>
 
-              <a href="https://krrish94.github.io" target="_blank">
-                <div class="card">
-                  <div class="card-content">
-                    <div class="columns is-vcentered">
-                      <div class="column is-one-quarter">
-                        <figure class="image is-128x128">
-                          <img class="is-rounded" src="https://krrish94.github.io/assets/img/prof_pic.png">
-                        </figure>
-                      </div>
-                      <div class="column">
-                        <p class="title is-4">Krishna Murthy Jatavallabhula
-                        </p>
-                        <p class="subtitle is-6">PostDoc at MIT CSAIL</p>
-                      </div>
-                    </div>
-                    <div class="content">
-                      Krishna Murthy Jatavallabhula is a postdoc at MIT CSAIL with Antonio Torralba and Josh Tenenbaum.
-He received his PhD at Mila, advised by Liam Paull.
-His research focuses on designing structured world models for robots: rich, multisensory models of the physical world that enable robots and embodied AI systems to perceive, reason, and act just as humans are able.
-His work draws upon ideas from robotics, computer vision, graphics, and computational cognitive science; intertwining our understanding of the world with probabilistic inference and deep learning.
-His work has been recognized with PhD fellowship awards from NVIDIA and Google, and a best-paper award from IEEE RAL.
-                    </div>
-                  </div>
-                </div>
-              </a>
-
-              <a href="https://pearl-lab.com/people/georgia-chalvatzaki/" target="_blank">
-                <div class="card">
-                  <div class="card-content">
-                    <div class="columns is-vcentered">
-                      <div class="column is-one-quarter">
-                        <figure class="image is-128x128">
-                          <img class="is-rounded" src="static/img/georgia.jpg">
-                        </figure>
-                      </div>
-                      <div class="column">
-                        <p class="title is-4">Georgia Chalvatzaki
-                        </p>
-                        <p class="subtitle is-6">Full Professor at Technical University of Darmstadt</p>
-                      </div>
-                    </div>
-                    <div class="content">
-                      As of April 2023, Georgia is a Full Professor for Interactive Robot Perception & Learning at the Computer Science Department of the Technical University of Darmstadt and Hessian.AI. Before that, she was an Assistant Professor since February 2022, and Independent Research Group Leader from March 2021, after getting the renowned Emmy Noether Programme (ENP) fund of the German Research Foundation (DFG). This project was awarded within the ENP Artificial Intelligence call of the DFG. In her research group, PEARL (previously iROSA), Dr. Chalvatzaki and her team propose new methods at the intersection of machine learning and classical robotics, taking the research for embodied AI robotic assistants one step further. The research in PEARL proposes novel methods for combined planning and learning to enable mobile manipulator robots to solve complex tasks in house-like environments, with the human-in-the-loop of the interaction process.
-                    </div>
-                  </div>
-                </div>
-              </a>
-
-              <a href="https://alex.bewley.ai/about.php" target="_blank">
-                <div class="card">
-                  <div class="card-content">
-                    <div class="columns is-vcentered">
-                      <div class="column is-one-quarter">
-                        <figure class="image is-128x128">
-                          <img class="is-rounded" src="https://avatars.githubusercontent.com/u/8096683?v=4">
-                        </figure>
-                      </div>
-                      <div class="column">
-                        <p class="title is-4">Alex Bewley</p>
-                        <p class="subtitle is-6">Researcher at Google DeepMind</p>
-                      </div>
-                    </div>
-                    <div class="content">
-                      Alex Bewley is a Researcher at in Google Zurich Switzerland where he investigates novel approaches to machine learning and perception.
-                      Previously, he was a Postdoc at the Applied Artificial Intelligence Lab at the University of Oxford (formally part of the Mobile Robotics Group) working with Ingmar Posner and Paul Newman.
-                      There, the scope of his research covered various domains including multi-task learning, unsupervised domain adaptation, visual attention, model introspection and interpretability.
-                      He completed his PhD research at the Queensland University of Technology (Australia) alongside the ARC Centre of Excellence for Robotic Vision.
-                      His PhD topic was focused on the automatic detection and tracking of moving objects from video data with applications towards field robotics.
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </section>
-
-          <section class="section" id="Related Work">
-            <div class="container is-max-desktop content">
-              <h2 class="title" id="relatedwork">Related Works 🧑‍🤝</h2>
-              Below is a collection of concurrent and related works in the field of open-set 3D scene understanding.
-              Please
-              feel free to get in touch to add other works as well.
-              <ul>
-                <li><a href="https://concept-fusion.github.io/">ConceptFusion: Open-set Multimodal 3D Mapping</a> RSS'23
-                </li>
-                <li><a href="https://pengsongyou.github.io/openscene">OpenScene: 3D Scene Understanding with Open
-                    Vocabularies</a> CVPR'23</li>
-                <li><a href="https://www.lerf.io">LERF: Language Embedded Radiance Fields</a> ICCV'23</li>
-                <li><a href="https://pfnet-research.github.io/distilled-feature-fields/">Decomposing NeRF for Editing
-                    via Feature Field Distillation</a> NeurIPS'22</li>
-                <li><a href="https://semantic-abstraction.cs.columbia.edu/">Semantic Abstraction: Open-World 3D Scene
-                    Understanding from 2D Vision-Language Models</a> CoRL'22</li>
-                <li><a href="https://rozdavid.github.io/scannet200">Language-Grounded Indoor 3D Semantic Segmentation in
-                    the Wild</a> ECCV'22</li>
-                <li><a href="https://3dlg-hcvc.github.io/multiscan/">MultiScan: Scalable RGBD Scanning for 3D
-                    Environments with Articulated Objects</a> NeurIPS'22</li>
-                <li><a href="https://github.com/NVlabs/ODISE">ODISE: Open-Vocabulary Panoptic Segmentation with
-                    Text-to-Image Diffusion Models</a> CVPR'23</li>
-                <li><a href="https://github.com/Kunhao-Liu/3D-OVS">Weakly Supervised 3D Open-Vocabulary Segmentation</a>
-                  NeurIPS'23</li>
-                <li><a href="https://arxiv.org/abs/2306.02329">Multi-CLIP: Contrastive Vision-Language Pre-training for
-                    Question Answering tasks in 3D Scenes</a></li>
-                <li><a href="https://openmask3d.github.io">OpenMask3D: Open-Vocabulary 3D Instance Segmentation</a>
-                  NeurIPS'23</li>
-                <li><a href="https://arxiv.org/abs/2303.04748">CLIP-FO3D: Learning Free Open-world 3D Scene
-                    Representations from 2D Dense CLIP</li>
-                <li><a href="https://tsagkas.github.io/vl-fields/">VL-Fields: Towards Language-Grounded Neural Implicit
-                    Spatial Representations</a> ICRA'23</li>
-                <li><a
-                    href="https://openaccess.thecvf.com/content/CVPR2023/papers/Ding_PLA_Language-Driven_Open-Vocabulary_3D_Scene_Understanding_CVPR_2023_paper.pdf">PLA:
-                    Language-Driven Open-Vocabulary 3D Scene Understanding</a> CVPR'23</li>
-                <li><a href="https://arxiv.org/abs/2304.00962">RegionPLC: Regional Point-Language Contrastive Learning
-                    for Open-World 3D Scene Understanding</a></li>
-                <li><a href="https://arxiv.org/abs/2309.00616">OpenIns3D: Snap and Lookup for 3D open-vocabulary
-                    Instance Segmentation</a></li>
-                <li><a href="https://concept-graphs.github.io/assets/pdf/2023-ConceptGraphs.pdf">ConceptGraphs:
-                    Open-Vocabulary 3D Scene Graphs for Perception and Planning</a></li>
-                <li><a
-                    href="https://openaccess.thecvf.com/content/CVPR2023/papers/Lu_Open-Vocabulary_Point-Cloud_Object_Detection_Without_3D_Annotation_CVPR_2023_paper.pdf">Open-Vocabulary
-                    Point-Cloud Object Detection without 3D Annotation</a> CVPR'23</li>
-                <li><a href="https://github.com/yangcaoai/CoDA_NeurIPS2023">CoDA: Collaborative Novel
-                    Box Discovery and Cross-modal Alignment for Open-vocabulary 3D Object Detection</a> NeurIPS'23
-                <li><a href="https://scenefun3d.github.io">SceneFun3D: Fine-Grained Functionality and Affordance Understanding in 3D Scenes</a> CVPR'24
-
-
-                </li>
-                <br>
-              </ul>
-              and many more ...
-
-
-              </ul>
-            </div>
-          </section>
-
-          <section class="section" id="Papers">
-            <div class="container is-max-desktop content">
-              <h2 class="title" id="dates">Important Dates 🗓️</h2>
-
-                <b>Paper Track</b>: We accept novel full 8-page papers for publication in the proceedings, and
-                  either shorter
-                  4-page extended abstracts or 8-page papers of novel or previously published work that will not
-                  be included in
-                  the
-                  proceedings. Full papers should use the <a
-                    href="https://eccv.ecva.net/Conferences/2024/SubmissionPolicies"> official ECCV 2024 template</a>.
-                    Extended abstracts are not subject to the ECCV rules, so they can be in any template but, as a rule to not be considered a publication in terms of double submission policies,
-                    they should be 4 pages in CVPR template format. 
-                </li>
-                <ul>
-                  <li><b>Submission Portal</b>: <a href="">TBD</a></li>
-                  <li><b>Paper Submission Deadline</b>: TDB</li>
-                  <li><b>Notification to Authors</b>: TDB</li>
-                  <li><b>Camera-ready submission</b>: August 25, 2024</li>
-                </ul>
-            </div>
-          </section>
-
-          <section class="section" id="Organizers">
-            <div class="container is-max-desktop content">
-              <h2 class="title" id="organizers">Organizers</h2>
-
-              <div class="columns is-centered is-variable is-0">
+          <div class="card">
+            <div class="card-content">
+              <div class="columns is-vcentered">
                 <div class="column is-one-quarter">
-                  <a href="http://francisengelmann.github.io">
-                    <div class="card">
-                      <div class="card-image">
-                        <figure class="image">
-                          <img class="is-rounded" src="./static/img/francis.jpg" alt="Placeholder image">
-                        </figure>
-                      </div>
-                      <div class="card-content">
-                        <div class="media">
-                          <div class="media-content" style="overflow-x: unset;">
-                            <p class="title is-7 is-spaced">Francis Engelmann</p>
-                            <p class="subtitle is-7">ETH Zurich</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
+                  <figure class="image is-128x128">
+                    <img class="is-rounded" src="https://media.licdn.com/dms/image/C5603AQGDojnfVGAteg/profile-displayphoto-shrink_800_800/0/1519572649807?e=1722470400&v=beta&t=ElYm2iHF3Mcm5euA6ZOpRZJOjh8b1p39v8kTpBp4IoU">
+                  </figure>
                 </div>
-                <div class="column is-one-quarter">
-                  <a href="https://aycatakmaz.github.io">
-                    <div class="card">
-                      <div class="card-image">
-                        <figure class="image">
-                          <img class="is-rounded" src="./static/img/ayca.jpg" alt="Placeholder image">
-                        </figure>
-                      </div>
-                      <div class="card-content">
-                        <div class="media">
-                          <div class="media-content" style="overflow-x: unset;">
-                            <p class="title is-7 is-spaced">Ayca Takmaz</p>
-                            <p class="subtitle is-7">ETH Zurich</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="column is-one-quarter">
-                  <a href="https://jonasschult.github.io">
-                    <div class="card">
-                      <div class="card-image">
-                        <figure class="image">
-                          <img class="is-rounded" src="https://jonasschult.github.io/images/profile.jpg"
-                            alt="Placeholder image">
-                        </figure>
-                      </div>
-                      <div class="card-content">
-                        <div class="media">
-                          <div class="media-content" style="overflow-x: unset;">
-                            <p class="title is-7 is-spaced">Jonas Schult</p>
-                            <p class="subtitle is-7">RWTH Aachen</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="column is-one-quarter">
-                  <a href="https://github.com/elisabettafedele">
-                    <div class="card">
-                      <div class="card-image">
-                        <figure class="image">
-                          <img class="is-rounded" src="./static/img/elisabetta.png" alt="Placeholder image">
-                        </figure>
-                      </div>
-                      <div class="card-content">
-                        <div class="media">
-                          <div class="media-content" style="overflow-x: unset;">
-                            <p class="title is-7 is-spaced">Elisabetta Fedele</p>
-                            <p class="subtitle is-7">ETH Zurich</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-
-              </div>
-              <div class="columns is-centered is-variable is-0">
-
-                <div class="column is-one-quarter">
-                  <a href="https://alexdelitzas.github.io/">
-                    <div class="card">
-                      <div class="card-image">
-                        <figure class="image">
-                          <img class="is-rounded" src="./static/img/alex.jpeg" alt="Placeholder image">
-                        </figure>
-                      </div>
-                      <div class="card-content">
-                        <div class="media">
-                          <div class="media-content" style="overflow-x: unset;">
-                            <p class="title is-7 is-spaced">Alex Delitzas</p>
-                            <p class="subtitle is-7">ETH Zurich</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-
-
-                <div class="column is-one-quarter">
-                  <a href="https://github.com/WaldJohannaU">
-                    <div class="card">
-                      <div class="card-image">
-                        <figure class="image">
-                          <img class="is-rounded" src="./static/img/johanna.jpg" alt="Placeholder image">
-                        </figure>
-                      </div>
-                      <div class="card-content">
-                        <div class="media">
-                          <div class="media-content" style="overflow-x: unset;">
-                            <p class="title is-7 is-spaced">Johanna Wald</p>
-                            <p class="subtitle is-7">Google</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="column is-one-quarter">
-                  <a href="https://pengsongyou.github.io">
-                    <div class="card">
-                      <div class="card-image">
-                        <figure class="image">
-                          <img class="is-rounded" src="./static/img/songyou.jpg" alt="Placeholder image">
-                        </figure>
-                      </div>
-                      <div class="card-content">
-                        <div class="media">
-                          <div class="media-content" style="overflow-x: unset;">
-                            <p class="title is-7 is-spaced">Songyou Peng</p>
-                            <p class="subtitle is-7">ETH Zurich</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="column is-one-quarter">
-                  <a href="https://xiwang1212.github.io/homepage/">
-                    <div class="card">
-                      <div class="card-image">
-                        <figure class="image">
-                          <img class="is-rounded" src="./static/img/xi.jpg" alt="Placeholder image">
-                        </figure>
-                      </div>
-                      <div class="card-content">
-                        <div class="media">
-                          <div class="media-content" style="overflow-x: unset;">
-                            <p class="title is-7 is-spaced">Xi Wang</p>
-                            <p class="subtitle is-7">ETH Zurich</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-
-              </div>
-              <div class="columns is-centered is-variable is-0">
-
-
-                <div class="column is-one-quarter">
-                  <a href="https://orlitany.github.io">
-                    <div class="card">
-                      <div class="card-image">
-                        <figure class="image">
-                          <img class="is-rounded" src="./static/img/or.jpg" alt="Placeholder image">
-                        </figure>
-                      </div>
-                      <div class="card-content">
-                        <div class="media">
-                          <div class="media-content" style="overflow-x: unset;">
-                            <p class="title is-7 is-spaced">Or Litany</p>
-                            <p class="subtitle is-7">NVIDIA, Technion</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="column is-one-quarter">
-                  <a href="https://paschalidoud.github.io">
-                    <div class="card">
-                      <div class="card-image">
-                        <figure class="image">
-                          <img class="is-rounded" src="./static/img/despoina.jpeg" alt="Placeholder image">
-                        </figure>
-                      </div>
-                      <div class="card-content">
-                        <div class="media">
-                          <div class="media-content" style="overflow-x: unset;">
-                            <p class="title is-7 is-spaced">Despi Paschalidou</p>
-                            <p class="subtitle is-7">Stanford University</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-
-
-                <div class="column is-one-quarter">
-                  <a href="https://federicotombari.github.io">
-                    <div class="card">
-                      <div class="card-image">
-                        <figure class="image">
-                          <img class="is-rounded" src="./static/img/federico.jpg" alt="Placeholder image">
-                        </figure>
-                      </div>
-                      <div class="card-content">
-                        <div class="media">
-                          <div class="media-content" style="overflow-x: unset;">
-                            <p class="title is-7 is-spaced">Federico Tombari</p>
-                            <p class="subtitle is-7">TUM, Google</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="column is-one-quarter">
-                  <a href="https://people.inf.ethz.ch/marc.pollefeys/">
-                    <div class="card">
-                      <div class="card-image">
-                        <figure class="image">
-                          <img class="is-rounded" src="./static/img/marc.jpg" alt="Placeholder image">
-                        </figure>
-                      </div>
-                      <div class="card-content">
-                        <div class="media">
-                          <div class="media-content" style="overflow-x: unset;">
-                            <p class="title is-7 is-spaced">Marc Pollefeys</p>
-                            <p class="subtitle is-7">ETHZ, Microsoft</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
+                <div class="column">
+                  <a href="https://research.nvidia.com/labs/dvl/author/laura-leal-taixe/" target="_blank">
+                  <p class="title is-4">Laura Leal-Taixé</p>
+                  <p class="subtitle is-6">Senior Research Manager at NVIDIA</p>
+                </a>
                 </div>
               </div>
-            </div>
-          </section>
-
-          <footer class="footer">
-            <div class="container">
               <div class="content">
-                <p>
-                  This website is licensed under a <a rel="license"
-                    href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-                    Commons Attribution-ShareAlike 4.0 International License</a>.
-                  <br />
-                  It borrows the source code of <a href="https://github.com/nerfies/nerfies.github.io">this website</a>.
-                  We would like to thank Utkarsh Sinha and Keunhong Park.
-                </p>
+                Dr. Laura Leal-Taixé is a Senior Research Manager at NVIDIA and also an Adjunct Professor at the Technical University of Munich (TUM),
+                leading the Dynamic Vision and Learning group. From 2018 until 2022, she was a tenure-track professor at TUM.
+                Before that, she spent two years as a postdoctoral researcher at ETH Zurich, Switzerland, and a year as a senior postdoctoral researcher in the Computer Vision Group
+                at the Technical University in Munich. She obtained her PhD from the Leibniz University of Hannover in Germany, spending a year as a visiting scholar at the University
+                of Michigan, Ann Arbor, USA. She pursued B.Sc. and M.Sc. in Telecommunications Engineering at the Technical University of Catalonia (UPC) in her native city of Barcelona.
+                She went to Boston, USA to do her Masters Thesis at Northeastern University with a fellowship from the Vodafone foundation.
+                She is a recipient of the Sofja Kovalevskaja Award of 1.65 million euros in 2017, the Google Faculty Award in 2021, and the ERC Starting Grant in 2022.
               </div>
             </div>
-          </footer>
-</body>
+          </div>
+
+          <br/>
+          <div class="card">
+            <div class="card-content">
+              <div class="columns is-vcentered">
+                <div class="column is-one-quarter">
+                  <figure class="image is-128x128">
+                    <img class="is-rounded" src="https://krrish94.github.io/assets/img/prof_pic.png">
+                  </figure>
+                </div>
+                <a href="https://krrish94.github.io" target="_blank">
+
+                <div class="column">
+                  <p class="title is-4">Krishna Murthy Jatavallabhula
+                  </p>
+                  <p class="subtitle is-6">PostDoc at MIT CSAIL</p>
+                </div>
+                </a>
+              </div>
+              <div class="content">
+                Krishna Murthy Jatavallabhula is a postdoc at MIT CSAIL with Antonio Torralba and Josh Tenenbaum.
+  He received his PhD at Mila, advised by Liam Paull.
+  His research focuses on designing structured world models for robots: rich, multisensory models of the physical world that enable robots and embodied AI systems to perceive, reason, and act just as humans are able.
+  His work draws upon ideas from robotics, computer vision, graphics, and computational cognitive science; intertwining our understanding of the world with probabilistic inference and deep learning.
+  His work has been recognized with PhD fellowship awards from NVIDIA and Google, and a best-paper award from IEEE RAL.
+              </div>
+            </div>
+          </div>
+
+          <br/>
+          <div class="card">
+              <div class="card-content">
+                <div class="columns is-vcentered">
+                  <div class="column is-one-quarter">
+                    <figure class="image is-128x128">
+                      <img class="is-rounded" src="static/img/georgia.jpg">
+                    </figure>
+                  </div>
+                  <a href="https://pearl-lab.com/people/georgia-chalvatzaki/" target="_blank">
+                    <div class="column">
+                    <p class="title is-4">Georgia Chalvatzaki
+                    </p>
+                    <p class="subtitle is-6">Full Professor at Technical University of Darmstadt</p>
+                  </div>
+                  </a>
+                </div>
+                <div class="content">
+                  As of April 2023, Georgia is a Full Professor for Interactive Robot Perception & Learning at the Computer Science Department of the Technical University of Darmstadt and Hessian.AI. Before that, she was an Assistant Professor since February 2022, and Independent Research Group Leader from March 2021, after getting the renowned Emmy Noether Programme (ENP) fund of the German Research Foundation (DFG). This project was awarded within the ENP Artificial Intelligence call of the DFG. In her research group, PEARL (previously iROSA), Dr. Chalvatzaki and her team propose new methods at the intersection of machine learning and classical robotics, taking the research for embodied AI robotic assistants one step further. The research in PEARL proposes novel methods for combined planning and learning to enable mobile manipulator robots to solve complex tasks in house-like environments, with the human-in-the-loop of the interaction process.
+                </div>
+              </div>
+            </div>
+            
+            <br/>
+            <div class="card">
+              <div class="card-content">
+                <div class="columns is-vcentered">
+                  <div class="column is-one-quarter">
+                    <figure class="image is-128x128">
+                      <img class="is-rounded" src="https://avatars.githubusercontent.com/u/8096683?v=4">
+                    </figure>
+                  </div>
+                  <a href="https://alex.bewley.ai/about.php" target="_blank">
+                    <div class="column">
+                    <p class="title is-4">Alex Bewley</p>
+                    <p class="subtitle is-6">Researcher at Google DeepMind</p>
+                  </div>
+                </a>
+                </div>
+                <div class="content">
+                  Alex Bewley is a Researcher at in Google Zurich Switzerland where he investigates novel approaches to machine learning and perception.
+                  Previously, he was a Postdoc at the Applied Artificial Intelligence Lab at the University of Oxford (formally part of the Mobile Robotics Group) working with Ingmar Posner and Paul Newman.
+                  There, the scope of his research covered various domains including multi-task learning, unsupervised domain adaptation, visual attention, model introspection and interpretability.
+                  He completed his PhD research at the Queensland University of Technology (Australia) alongside the ARC Centre of Excellence for Robotic Vision.
+                  His PhD topic was focused on the automatic detection and tracking of moving objects from video data with applications towards field robotics.
+                </div>
+              </div>
+            </div>
+
+          </div>
+      </section>
+
+  <section class="section" id="Related Work">
+    <div class="container is-max-desktop content">
+      <h2 class="title" id="relatedwork">Related Works</h2>
+      Below is a collection of concurrent and related works in the field of open-set 3D scene understanding.
+      Please
+      feel free to get in touch to add other works as well.
+      <ul>
+        <li><a href="https://concept-fusion.github.io/">ConceptFusion: Open-set Multimodal 3D Mapping</a> RSS'23
+        </li>
+        <li><a href="https://pengsongyou.github.io/openscene">OpenScene: 3D Scene Understanding with Open
+            Vocabularies</a> CVPR'23</li>
+        <li><a href="https://www.lerf.io">LERF: Language Embedded Radiance Fields</a> ICCV'23</li>
+        <li><a href="https://pfnet-research.github.io/distilled-feature-fields/">Decomposing NeRF for Editing
+            via Feature Field Distillation</a> NeurIPS'22</li>
+        <li><a href="https://semantic-abstraction.cs.columbia.edu/">Semantic Abstraction: Open-World 3D Scene
+            Understanding from 2D Vision-Language Models</a> CoRL'22</li>
+        <li><a href="https://rozdavid.github.io/scannet200">Language-Grounded Indoor 3D Semantic Segmentation in
+            the Wild</a> ECCV'22</li>
+        <li><a href="https://3dlg-hcvc.github.io/multiscan/">MultiScan: Scalable RGBD Scanning for 3D
+            Environments with Articulated Objects</a> NeurIPS'22</li>
+        <li><a href="https://github.com/NVlabs/ODISE">ODISE: Open-Vocabulary Panoptic Segmentation with
+            Text-to-Image Diffusion Models</a> CVPR'23</li>
+        <li><a href="https://github.com/Kunhao-Liu/3D-OVS">Weakly Supervised 3D Open-Vocabulary Segmentation</a>
+          NeurIPS'23</li>
+        <li><a href="https://arxiv.org/abs/2306.02329">Multi-CLIP: Contrastive Vision-Language Pre-training for
+            Question Answering tasks in 3D Scenes</a></li>
+        <li><a href="https://openmask3d.github.io">OpenMask3D: Open-Vocabulary 3D Instance Segmentation</a>
+          NeurIPS'23</li>
+        <li><a href="https://arxiv.org/abs/2303.04748">CLIP-FO3D: Learning Free Open-world 3D Scene
+            Representations from 2D Dense CLIP</li>
+        <li><a href="https://tsagkas.github.io/vl-fields/">VL-Fields: Towards Language-Grounded Neural Implicit
+            Spatial Representations</a> ICRA'23</li>
+        <li><a
+            href="https://openaccess.thecvf.com/content/CVPR2023/papers/Ding_PLA_Language-Driven_Open-Vocabulary_3D_Scene_Understanding_CVPR_2023_paper.pdf">PLA:
+            Language-Driven Open-Vocabulary 3D Scene Understanding</a> CVPR'23</li>
+        <li><a href="https://arxiv.org/abs/2304.00962">RegionPLC: Regional Point-Language Contrastive Learning
+            for Open-World 3D Scene Understanding</a></li>
+        <li><a href="https://arxiv.org/abs/2309.00616">OpenIns3D: Snap and Lookup for 3D open-vocabulary
+            Instance Segmentation</a></li>
+        <li><a href="https://concept-graphs.github.io/assets/pdf/2023-ConceptGraphs.pdf">ConceptGraphs:
+            Open-Vocabulary 3D Scene Graphs for Perception and Planning</a></li>
+        <li><a
+            href="https://openaccess.thecvf.com/content/CVPR2023/papers/Lu_Open-Vocabulary_Point-Cloud_Object_Detection_Without_3D_Annotation_CVPR_2023_paper.pdf">Open-Vocabulary
+            Point-Cloud Object Detection without 3D Annotation</a> CVPR'23</li>
+        <li><a href="https://github.com/yangcaoai/CoDA_NeurIPS2023">CoDA: Collaborative Novel
+            Box Discovery and Cross-modal Alignment for Open-vocabulary 3D Object Detection</a> NeurIPS'23
+        <li><a href="https://scenefun3d.github.io">SceneFun3D: Fine-Grained Functionality and Affordance Understanding in 3D Scenes</a> CVPR'24
+
+
+        </li>
+        <br>
+      </ul>
+      and many more ...
+
+
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="Papers">
+    <div class="container is-max-desktop content">
+      <h2 class="title" id="dates">Dates</h2>
+
+        <b>Paper Track</b>: We accept novel full 8-page papers for publication in the proceedings, and
+          either shorter
+          4-page extended abstracts or 8-page papers of novel or previously published work that will not
+          be included in
+          the
+          proceedings. Full papers should use the <a
+            href="https://eccv.ecva.net/Conferences/2024/SubmissionPolicies"> official ECCV 2024 template</a>.
+            Extended abstracts are not subject to the ECCV rules, so they can be in any template but, as a rule to not be considered a publication in terms of double submission policies,
+            they should be 4 pages in CVPR template format. 
+        </li>
+        <ul>
+          <li><b>Submission Portal</b>: <a href="">TBD</a></li>
+          <li><b>Paper Submission Deadline</b>: TDB</li>
+          <li><b>Notification to Authors</b>: TDB</li>
+          <li><b>Camera-ready submission</b>: August 25, 2024</li>
+        </ul>
+    </div>
+  </section>
+
+  <section class="section" id="Organizers">
+    <div class="container is-max-desktop content">
+      <h2 class="title" id="organizers">Organizers</h2>
+
+      <div class="columns is-centered is-variable is-0">
+        <div class="column is-one-quarter">
+          <a href="http://francisengelmann.github.io">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="./static/img/francis.jpg" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Francis Engelmann</p>
+                    <p class="subtitle is-7">ETH Zurich</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="column is-one-quarter">
+          <a href="https://aycatakmaz.github.io">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="./static/img/ayca.jpg" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Ayca Takmaz</p>
+                    <p class="subtitle is-7">ETH Zurich</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="column is-one-quarter">
+          <a href="https://jonasschult.github.io">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="https://jonasschult.github.io/images/profile.jpg"
+                    alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Jonas Schult</p>
+                    <p class="subtitle is-7">RWTH Aachen</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="column is-one-quarter">
+          <a href="https://github.com/elisabettafedele">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="./static/img/elisabetta.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Elisabetta Fedele</p>
+                    <p class="subtitle is-7">ETH Zurich</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+      <div class="columns is-centered is-variable is-0">
+
+        <div class="column is-one-quarter">
+          <a href="https://alexdelitzas.github.io/">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="./static/img/alex.jpeg" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Alex Delitzas</p>
+                    <p class="subtitle is-7">ETH Zurich</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="column is-one-quarter">
+          <a href="https://github.com/WaldJohannaU">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="./static/img/johanna.jpg" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Johanna Wald</p>
+                    <p class="subtitle is-7">Google</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="column is-one-quarter">
+          <a href="https://pengsongyou.github.io">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="./static/img/songyou.jpg" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Songyou Peng</p>
+                    <p class="subtitle is-7">ETH Zurich</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="column is-one-quarter">
+          <a href="https://xiwang1212.github.io/homepage/">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="./static/img/xi.jpg" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Xi Wang</p>
+                    <p class="subtitle is-7">ETH Zurich</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+      <div class="columns is-centered is-variable is-0">
+
+
+        <div class="column is-one-quarter">
+          <a href="https://orlitany.github.io">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="./static/img/or.jpg" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Or Litany</p>
+                    <p class="subtitle is-7">NVIDIA, Technion</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="column is-one-quarter">
+          <a href="https://paschalidoud.github.io">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="./static/img/despoina.jpeg" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Despi Paschalidou</p>
+                    <p class="subtitle is-7">Stanford University</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="column is-one-quarter">
+          <a href="https://federicotombari.github.io">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="./static/img/federico.jpg" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Federico Tombari</p>
+                    <p class="subtitle is-7">TUM, Google</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="column is-one-quarter">
+          <a href="https://people.inf.ethz.ch/marc.pollefeys/">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="./static/img/marc.jpg" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Marc Pollefeys</p>
+                    <p class="subtitle is-7">ETHZ, Microsoft</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero">
+    <div class="hero-body" style="background-color: #1C2D59;">
+    <!-- <div class="container" style="background-color: #333"> -->
+      <div class="content" align="center">
+        <img width="300" src="static/images/eth_logo_kurz_neg.png" />
+        <p style="color: white">
+          This website is licensed under a <a rel="license"
+            href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          <br />
+          It borrows the source code of <a href="https://github.com/nerfies/nerfies.github.io">this website</a>.
+          We would like to thank Utkarsh Sinha and Keunhong Park.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  </body>
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/jquery.mobile.custom.min.js"></script> 
 <script src="js/main.js"></script>
