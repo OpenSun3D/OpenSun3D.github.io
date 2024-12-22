@@ -6,9 +6,6 @@
   <meta name="keywords" content="OpenSun3D">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Open☀️3D </title>
-
-  <!-- <link href="https://fonts.googleapis.com/css?family=Nunito|Google+Sans|Noto+Sans|Castoro" rel="stylesheet"> -->
-
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
@@ -16,47 +13,9 @@
   <link rel="icon" href="./static/images/favicon.svg">
   <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
   <script src="js/modernizr.js"></script> <!-- Modernizr -->
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
-
-  <style>
-    .rcorners1 {
-      border-radius: 10px;
-      background: #ffffffd0;
-      padding: 5px;
-      font-size: 120%;
-      color: #5c5c5c;
-    }
-
-    .button {
-      border-radius: 10px;
-      background: #ffffffd0;
-      padding: 5px 15px 5px 15px;
-    }
-
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      /* background-color: #f9f9f9; */
-      min-width: 140px;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      padding: 5px 15px 5px 15px;
-      z-index: 1;
-      text-align: left;
-      color: black;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-      font-size: 14px;
-    }
-  </style>
+  <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
@@ -68,11 +27,11 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title" style="color: white">OpenSUN3D</h1>
-            <p class="title is-4" style="color: white">3<sup>rd</sup> Workshop on <br>Open-Vocabulary 3D Scene
+            <p class="title is-4" style="color: white">4<sup>th</sup> Workshop on <br>Open-World 3D Scene
               Understanding</p>
 
-            <h1 class="is-is-5" style="color: white">in conjunction with ECCV 2024 in Milan, Italy.</h1>
-            <b style="color: white">September 29, Sunday 14:00 - 17:30 - Room: Amber 4</b>
+            <h1 class="is-is-5" style="color: white">in conjunction with CVPR 2025 in Nashville, USA.</h1>
+            <!-- <b style="color: white">September 29, Sunday 14:00 - 17:30 - Room: Amber 4</b> -->
             <br>
           </div>
         </div>
@@ -94,7 +53,8 @@
           <div class="dropdown">
             <span class="button">All Editions &nbsp;<i class="fa fa-chevron-down" aria-hidden="true"></i></span>
             <div class="dropdown-content">
-              <a href="index.html">ECCV 2024</a>
+              <a href="index.html">CVPR 2025</a>
+              <a href="index_eccv24.html">ECCV 2024</a>
               <a href="index_cvpr24.html">CVPR 2024</a>
               <a href="index_iccv23.html">ICCV 2023</a>
             </div>
@@ -104,7 +64,7 @@
       </div>
     </div>
   </section>
-
+  
   <section class="section" id="Motivation">
     <div class="container is-max-desktop content">
       <h2 class="title">Introduction</h2>
@@ -200,7 +160,7 @@
     </div>
   </section> -->
 
-
+<!-- 
   <section class="section" id="schedule">
     <div class="container is-max-desktop content">
       <h2 class="title">Schedule</h2>
@@ -249,7 +209,7 @@
         </table>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section class="section" id="Invited Speakers">
     <div class="container is-max-desktop content">
@@ -431,109 +391,6 @@
     </div>
   </section>
 
-  <section class="section" id="papers">
-    <div class="container is-max-desktop content">
-      <h2 class="title" id="accepted">Accepted Papers</h2>
-      The following papers are accepted for poster presentation during the workshop.
-
-      <div class="box">
-        <article class="media">
-          <div class="media-content">
-            <div class="content">
-              <p>
-                <strong>SceneVerse: Scaling 3D Vision-Language Learning for Grounded Scene Understanding</strong><br>
-                Baoxiong Jia, Yixin Chen, Huangyue Yu, Yan Wang, Xuesong Niu, Tengyu Liu, Qing Li, Siyuan Huang
-              </p>
-            </div>
-            <nav class="level is-mobile">
-              <div class="level-left">
-                <a class="level-item" aria-label="reply" href="https://arxiv.org/abs/2401.09340"><span class="icon"> <i class="fas fa-file-pdf"></i> </span> Paper</a>
-                <a class="level-item" aria-label="retweet" href=""><span class="icon"><i class="fas fa-chalkboard-teacher"></i></span>Poster</a>
-              </div>
-            </nav> 
-          </div>
-        </article>
-      </div>
-
-      <div class="box">
-        <article class="media">
-          <div class="media-content">
-            <div class="content">
-              <p>
-                <strong>Unifying 3D Vision-Language Understanding via Promptable Queries</strong><br>
-                Ziyu Zhu, Zhuofan Zhang, Xiaojian Ma, Xuesong Niu, Yixin Chen, Baoxiong Jia, Siyuan Huang, Qing Li
-              </p>
-            </div>
-            <nav class="level is-mobile">
-              <div class="level-left">
-                <a class="level-item" aria-label="reply" href="https://arxiv.org/abs/2405.11442"><span class="icon"> <i class="fas fa-file-pdf"></i> </span> Paper</a>
-                <a class="level-item" aria-label="retweet" href=""><span class="icon"><i class="fas fa-chalkboard-teacher"></i></span>Poster</a>
-              </div>
-            </nav>
-          </div>
-        </article>
-      </div>
-        
-      <div class="box">
-        <article class="media">
-          <div class="media-content">
-            <div class="content">
-              <p>
-                <strong>OpenIns3D: Snap and Lookup for 3D Open-vocabulary Instance Segmentation</strong><br>
-                Zhening Huang, Xiaoyang Wu, Xi CHEN, Hengshuang Zhao, Lei Zhu, Joan Lasenby
-              </p>
-            </div>
-            <nav class="level is-mobile">
-              <div class="level-left">
-                <a class="level-item" aria-label="reply" href="https://arxiv.org/abs/2309.00616"><span class="icon"> <i class="fas fa-file-pdf"></i> </span> Paper</a>
-                <a class="level-item" aria-label="retweet" href=""><span class="icon"><i class="fas fa-chalkboard-teacher"></i></span>Poster</a>
-              </div>
-            </nav>
-          </div>
-        </article>
-      </div>
-
-      <div class="box">
-        <article class="media">
-          <div class="media-content">
-            <div class="content">
-              <p>
-                <strong>Task-oriented Sequential Grounding in 3D Scenes</strong><br>
-                Zhuofan Zhang, Ziyu Zhu, Pengxiang Li, Tengyu Liu, Xiaojian Ma, Yixin Chen, Baoxiong Jia, Siyuan Huang, Qing Li
-              </p>
-            </div>
-            <nav class="level is-mobile">
-              <div class="level-left">
-                <a class="level-item" aria-label="reply" href="https://arxiv.org/abs/2408.04034"><span class="icon"> <i class="fas fa-file-pdf"></i> </span> Paper</a>
-                <a class="level-item" aria-label="retweet" href=""><span class="icon"><i class="fas fa-chalkboard-teacher"></i></span>Poster</a>
-              </div>
-            </nav>
-          </div>
-        </article>
-      </div>
-
-      <div class="box">
-        <article class="media">
-          <div class="media-content">
-            <div class="content">
-              <p>
-                <strong>Space3D-Bench: Spatial 3D Question Answering Benchmark</strong><br>
-                Emilia Szymanska, Mihai Dusmanu, Mahdi Rad, Marc Pollefeys
-              </p>
-            </div>
-            <nav class="level is-mobile">
-              <div class="level-left">
-                <a class="level-item" aria-label="reply" href="https://arxiv.org/abs/2408.16662"><span class="icon"> <i class="fas fa-file-pdf"></i> </span> Paper</a>
-                <a class="level-item" aria-label="retweet" href=""><span class="icon"><i class="fas fa-chalkboard-teacher"></i></span>Poster</a>
-              </div>
-            </nav>
-          </div>
-        </article>
-      </div>
-
-    </div>
-  </section>
-
 
   <section class="section" id="dates">
     <div class="container is-max-desktop content">
@@ -635,7 +492,7 @@
                 <div class="media">
                   <div class="media-content" style="overflow-x: unset;">
                     <p class="title is-7 is-spaced">Francis Engelmann</p>
-                    <p class="subtitle is-7">ETH Zurich</p>
+                    <p class="subtitle is-7">Stanford</p>
                   </div>
                 </div>
               </div>
@@ -661,48 +518,7 @@
             </div>
           </a>
         </div>
-        <div class="column is-one-quarter">
-          <a href="https://jonasschult.github.io">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image">
-                  <img class="is-rounded" src="https://jonasschult.github.io/images/profile.jpg"
-                    alt="Placeholder image">
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-content" style="overflow-x: unset;">
-                    <p class="title is-7 is-spaced">Jonas Schult</p>
-                    <p class="subtitle is-7">RWTH Aachen</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="column is-one-quarter">
-          <a href="https://github.com/elisabettafedele">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image">
-                  <img class="is-rounded" src="./static/img/elisabetta.png" alt="Placeholder image">
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-content" style="overflow-x: unset;">
-                    <p class="title is-7 is-spaced">Elisabetta Fedele</p>
-                    <p class="subtitle is-7">ETH Zurich</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-      </div>
-      <div class="columns is-centered is-variable is-0">
+        
 
         <div class="column is-one-quarter">
           <a href="https://alexdelitzas.github.io/">
@@ -724,7 +540,31 @@
           </a>
         </div>
 
+        <div class="column is-one-quarter">
+          <a href="https://github.com/elisabettafedele">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="./static/img/elisabetta.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Elisabetta Fedele</p>
+                    <p class="subtitle is-7">ETH Zurich</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
 
+      <div class="columns is-centered is-variable is-0">
+
+
+<!-- 
         <div class="column is-one-quarter">
           <a href="https://github.com/WaldJohannaU">
             <div class="card">
@@ -744,25 +584,51 @@
             </div>
           </a>
         </div>
-        <div class="column is-one-quarter">
-          <a href="https://pengsongyou.github.io">
+         -->
+
+
+         <div class="column is-one-quarter">
+          <a href="https://katadam.github.io/">
             <div class="card">
               <div class="card-image">
                 <figure class="image">
-                  <img class="is-rounded" src="./static/img/songyou.jpg" alt="Placeholder image">
+                  <img class="is-rounded" src="./static/img/kata.png" alt="Placeholder image">
                 </figure>
               </div>
               <div class="card-content">
                 <div class="media">
                   <div class="media-content" style="overflow-x: unset;">
-                    <p class="title is-7 is-spaced">Songyou Peng</p>
-                    <p class="subtitle is-7">ETH Zurich</p>
+                    <p class="title is-7 is-spaced">Katerina Adam</p>
+                    <p class="subtitle is-7">NTUA</p>
                   </div>
                 </div>
               </div>
             </div>
           </a>
         </div>
+        
+        <div class="column is-one-quarter">
+          <a href="https://jonasschult.github.io">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="https://jonasschult.github.io/images/profile.jpg"
+                    alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Jonas Schult</p>
+                    <p class="subtitle is-7">Meta</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+
         <div class="column is-one-quarter">
           <a href="https://zuriabauer.com">
             <div class="card">
@@ -806,25 +672,6 @@
             </div>
           </a>
         </div>
-        <div class="column is-one-quarter">
-          <a href="https://paschalidoud.github.io">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image">
-                  <img class="is-rounded" src="./static/img/despoina.jpeg" alt="Placeholder image">
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-content" style="overflow-x: unset;">
-                    <p class="title is-7 is-spaced">Despi Paschalidou</p>
-                    <p class="subtitle is-7">Stanford University</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
 
 
         <div class="column is-one-quarter">
@@ -846,6 +693,7 @@
             </div>
           </a>
         </div>
+
         <div class="column is-one-quarter">
           <a href="https://people.inf.ethz.ch/marc.pollefeys/">
             <div class="card">
@@ -865,6 +713,27 @@
             </div>
           </a>
         </div>
+
+        <div class="column is-one-quarter">
+          <a href="https://geometry.stanford.edu/?member=guibas">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="./static/img/leonidas.jpg" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Leonidas Guibas</p>
+                    <p class="subtitle is-7">Stanford</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      
       </div>
     </div>
   </section>
