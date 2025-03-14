@@ -290,6 +290,32 @@
     </div>
   </section>
 
+
+
+    <script>
+        function updateCountdown() {
+            const targetDate = new Date("March 25, 2025 17:00:00 GMT-7").getTime();
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference <= 0) {
+                document.getElementById("countdown").innerHTML = "Countdown expired!";
+                return;
+            }
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = 
+                `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call to avoid delay
+    </script>
+  
   <section class="section" id="dates">
     <div class="container is-max-desktop content">
       <h2 class="title" id="paper_track">Paper Track</h2>
@@ -301,7 +327,7 @@
       <ul>
         <li><b>Submission Portal</b>: <a href="https://openreview.net/group?id=thecvf.com/CVPR/2025/Workshop/OpenSUN3D">OpenReview</a></li>
         <li><b>Paper Submission Opens</b>: January 15, 2025</li>
-        <li><b>Paper Submission Deadline</b>: March 25, 2025</li>
+        <li><b>Paper Submission Deadline</b>: March 25, 2025 <span id="countdown"></span>span</li>
         <li><b>Notification to Authors</b>: March 31, 2025</li>
         <li><b>Camera-ready submission</b>: April 14, 2025 <i>(Authors will receive a link to submit camera-ready versions on or around April 6, 2025)</i></li> 
       </ul>
