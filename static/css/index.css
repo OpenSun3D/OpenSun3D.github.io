@@ -10,6 +10,10 @@ body {
   color: #5c5c5c;
 }
 
+.outline {
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
 .button {
   border-radius: 10px;
   background: #ffffffd0;
