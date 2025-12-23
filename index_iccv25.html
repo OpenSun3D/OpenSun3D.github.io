@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="OpenSun3D">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open☀️3D </title>
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+  <script src="js/modernizr.js"></script> <!-- Modernizr -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+</head>
+
+<body>
+  <section class="hero">
+    <!-- <div class="hero-body" style="background-color: #1C2D59"> -->
+    <div class="hero-body" style="background-color: #1C2D59; background-image: url('static/images/2bdcba49-2213-4d49-89af-5266e2fab56b.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 outline" style="color: white">OpenSUN3D</h1>
+            <p class="title is-4 outline" style="color: white">5<sup>th</sup> Workshop on Open-World 3D Scene Understanding with Foundation Models</p>
+            <h1 class="is-is-5 outline" style="color: white"><b>in conjunction with ICCV, October 19, (afternoon) in Honolulu, USA.</b></h1>
+            <h1 class="is-is-5" style="color: white">Room: 306 B</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <h2 class="subtitle has-text-centered">
+          <a href="#schedule" class="button">Schedule</a>
+          <a href="#speakers" class="button">Speakers</a>
+          <!-- <a href="#papers" class="button">Papers</a> -->
+          <a href="#paper_track" class="button">Paper Track</a>
+          <a href="#challenge" class="button">Challenge</a>
+          <a href="#relatedwork" class="button">Related Work</a>
+          <a href="#organizers" class="button">Organizers</a>
+          <div class="dropdown">
+            <span class="button">All Editions &nbsp;<i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+            <div class="dropdown-content">
+              <a href="index.html">CVPR 2026</a><br />
+              <a href="index_iccv25.html">ICCV 2025</a><br />
+              <a href="index_cvpr25.html">CVPR 2025</a><br />
+              <a href="index_eccv24.html">ECCV 2024</a><br />
+              <a href="index_cvpr24.html">CVPR 2024</a><br />
+              <a href="index_iccv23.html">ICCV 2023</a>
+            </div>
+          </div>
+        </h2>
+
+      </div>
+    </div>
+  </section>
+  
+  <section class="section" id="Motivation">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Introduction</h2>
+      <div class="content has-text-justified">
+        The ability to perceive, understand and interact with 3D scenes is a long-standing goal in research with applications in AR/VR, health, robotics and so on.
+        Current 3D scene understanding models are largely limited to low-level recognition tasks such as object detection or semantic segmentation,
+        and do not generalize well beyond the a pre-defined set of training labels.
+        More recently, large visual-language models (VLM), such as CLIP, have demonstrated impressive capabilities trained solely on internet-scale image-language pairs.
+        Some initial works have shown that these models have the potential to extend 3D scene understanding not only
+        to open set recognition, but also offer additional applications such as affordances, materials, activities, and properties of unseen environments.
+        The goal of this workshop is to bundle these efforts and to discuss and establish clear task definitions, evaluation metrics, and benchmark datasets.
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="section" style="margin-top: -50px">
+    <div class="container is-max-desktop">
+      <section class="section" id="Challenge">
+        <div class="container is-max-desktop content">
+          <h2 class="title" id="challenge">Challenge 🚀</h2>
+          This year, our challenge will consist of two tracks, open-vocabulary 3D object instance search and
+          open-vocabulary 3D functionality grounding.
+          <br>
+
+          <ul>
+            <li><b>Challenge Track 1</b>: <a href="https://opensun3d.github.io/cvpr24-challenge/track_1">Open-vocabulary
+                3D Object Instance
+                Search</a></li>
+            <ul>
+              <li><b>Submission Portal</b>: <a
+                  href="https://eval.ai/web/challenges/challenge-page/2102/overview">EvalAI</a></li>
+              <li><b>Data Instructions & Helper Scripts</b>: April 17, 2024</li>
+              <li><b>Dev Phase Start</b>: April 17, 2024</li>
+              <li><b>Submission Portal Start</b>: April 19, 2024</li>
+              <li><b>Test Phase Start</b>: May 1, 2024</li>
+              <li><b>Test Phase End</b>: June 14, 2024 (14:00 Pacific Time)</li>
+            </ul>
+            <li><b>Challenge Track 2</b>: <a href="https://opensun3d.github.io/cvpr24-challenge/track_2">Open-vocabulary
+                3D Functionality
+                Grounding</a></li>
+            <ul>
+              <li><b>Submission Portal</b>: <a
+                  href="https://eval.ai/web/challenges/challenge-page/2262/overview">EvalAI</a></li>
+              <li><b>Data Instructions & Helper Scripts</b>: April 17, 2024</li>
+              <li><b>Dev Phase Start</b>: April 17, 2024</li>
+              <li><b>Submission Portal Start</b>: April 19, 2024</li>
+              <li><b>Test Phase Start</b>: May 4, 2024</li>
+              <li><b>Test Phase End</b>: June 14, 2024 (14:00 Pacific Time)</li>
+            </ul>
+          </ul>
+
+          <p>Please check <a href="https://opensun3d.github.io/index_iccv23.html#challengeresults">this page</a>
+            out
+            for an overview of last year's challenge results.
+            We have also published a <a href="https://arxiv.org/abs/2402.15321"> technical report</a> providing an
+            overview of our ICCV 2023 workshop challenge.</p>
+
+          <p>Our workshop challenge is proudly supported by:</p>
+          <p align="center">
+            <img src="static/images/matterport.png" width="40%" style="margin: 20px" />
+            <img src="static/images/nvidia.png" width="40%" style="margin: 20px" />
+          </p>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="section" id="Papers">
+    <div class="container is-max-desktop content">
+      <h2 class="title" id="dates">Important Dates 🗓️</h2>
+
+      <b>Paper Track</b>: We accept novel full 8-page papers for publication in the proceedings, and
+      either shorter
+      4-page extended abstracts or 8-page papers of novel or previously published work that will not
+      be included in
+      the
+      proceedings. All submissions have to follow the <a
+        href="https://cvpr.thecvf.com/Conferences/2024/AuthorGuidelines">CVPR 2024 author
+        guidelines.</a>
+      </li>
+      <ul>
+        <li><b>Submission Portal</b>: <a href="https://cmt3.research.microsoft.com/OpenSUN3D2024">CMT</a></li>
+        <li><b>Paper Submission Deadline</b>: April 1, 2024 (23:59 Pacific Time)</li>
+        <li><b>Notification to Authors</b>: April 9, 2024</li>
+        <li><b>Camera-ready submission</b>: April 14, 2024</li>
+      </ul>
+    </div>
+  </section> -->
+
+  <section class="section" id="schedule">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Schedule (Room 306 B)</h2>
+      <div class="content has-text-justified">
+        <table class="table table-striped">
+          <tr>
+            <td width="130">13:30 -	13:40</td>
+            <td style="background-color: #ddadef37">Welcome & Introduction</td>
+          </tr>
+          <tr>
+            <td>13:40 -	14:20</td>
+            <td style="background-color:#8cd8fb72">
+              Keynote 1 &nbsp;&nbsp;&nbsp;&nbsp;
+              <b>Mackenzie W. Mathis</b> (EPFL)
+            </td>
+          </tr>
+          <tr>
+            <td>14:20 - 15:00</td>
+            <td style="background-color:#8cd8fb72">
+              Keynote 2 &nbsp;&nbsp;&nbsp;&nbsp;
+              <b>Saining Xie</b> (NYU) &nbsp;&nbsp;&nbsp;&nbsp;
+          </tr>
+          <tr>
+            <td>15:00 - 16:00</td>
+            <td style="background-color: #ddadef37">Coffee Break & Poster Session (Hall II, Boards 148-157)</td>
+          </tr>
+          <tr>
+            <td>16:00 -	16:40</td>
+            <td style="background-color:#8cd8fb72">
+              Keynote 3 &nbsp;&nbsp;&nbsp;&nbsp;
+              <b>Julian Straub</b> (Meta RLR) &nbsp;&nbsp;&nbsp;&nbsp;
+          </tr>
+          <tr>
+            <td>16:40	- 17:20</td>
+            <td style="background-color:#8cd8fb72">
+              Keynote 4 &nbsp;&nbsp;&nbsp;&nbsp;
+              <b>Angel X. Chang</b> (SFU) &nbsp;&nbsp;&nbsp;&nbsp;
+          </tr>
+          <tr>
+            <td>17:20 -	18:00</td>
+            <td style="background-color:#8cd8fb72">
+              Keynote 5 &nbsp;&nbsp;&nbsp;&nbsp;
+              <b>Iro Armeni</b> (Stanford)  &nbsp;&nbsp;&nbsp;&nbsp;
+          </tr>
+          <tr>
+            <td>18:00	- 18:10</td>
+            <td style="background-color: #ddadef37">Concluding Remarks</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+
+ 
+  <section class="section" id="Invited Speakers">
+    <div class="container is-max-desktop content">
+      <h2 class="title" id="speakers">Keynote Speakers</h2>
+
+      <div class="card">
+        <div class="card-content">
+          <div class="columns is-vcentered">
+            <div class="column is-one-quarter">
+              <figure class="image is-128x128">
+                <img class="is-rounded" src="https://opensun3d.github.io/static/img/mackenzie.jpg" style="width: 128px; height: 128px; object-fit: cover;">
+              </figure>
+            </div>
+            <div class="column">
+              <a href="https://www.mackenziemathislab.org/mackenziemathis" target="_blank">
+                <p class="title is-4">Mackenzie W. Mathis</p>
+                <p class="subtitle is-6">Assistant Professor at EPFL</p>
+              </a>
+            </div>
+          </div>
+          <p>
+            Prof. Mackenzie W. Mathis is the Bertarelli Foundation Chair of Integrative Neuroscience and an Assistant Professor at the Swiss Federal Institute of Technology, Lausanne (EPFL).
+            Following the award of her PhD at Harvard University in 2017 with Prof. Naoshige Uchida, she was awarded the prestigious Rowland Fellowship at Harvard to start her independent laboratory (2017-2020).
+            Before starting her group, she worked with Prof. Matthias Bethge at the University of Tübingen in the summer of 2017 with the support of the Women & the Brain Project ALS Fellowship.
+            She is an ELLIS Scholar, Vallee Scholar, a former NSF Graduate Fellow, and her work has been featured in the news at Bloomberg BusinessWeek, Nature, and The Atlantic.
+            She was awarded the FENS EJN Young Investigator Prize 2022, the Eric Kandel Young Neuroscientist Prize in 2023, The Robert Bing 2024 Prize, and the National Swiss Science Prize Latsis 2024.
+          </p>
+        </div>
+      </div>
+
+      <br />
+
+      <div class="card">
+        <div class="card-content">
+          <div class="columns is-vcentered">
+            <div class="column is-one-quarter">
+              <figure class="image is-128x128">
+                <img class="is-rounded" src="https://opensun3d.github.io/static/img/saining.png" style="width: 128px; height: 128px; object-fit: cover;">
+              </figure>
+            </div>
+            <div class="column">
+              <a href="https://www.sainingxie.com/" target="_blank">
+                <p class="title is-4">Saining Xie</p>
+                <p class="subtitle is-6">Assistant Professor at New York University</p>
+              </a>
+            </div>
+          </div>
+          <p>
+            Saining Xie is an Assistant Professor of Computer Science at the Courant Institute of Mathematical Sciences at New York University and is affiliated with NYU Center for Data Science.
+            Before joining NYU in 2023, he was a research scientist at FAIR, Meta.
+            In 2018, he received his Ph.D. degree in computer science from the University of California San Diego.
+            He works in computer vision and machine learning, with a particular interest in scalable visual representation learning.
+            His contributions have been recognized with several honors, including the Marr Prize Honorable Mention, CVPR Best Paper Finalists, AISTATS Test of Time Award, Amazon Research Award, NSF CAREER Award, and the PAMI Young Researcher Award.
+          </p>
+        </div>
+      </div>
+
+      <br />
+
+      <div class="card">
+        <div class="card-content">
+          <div class="columns is-vcentered">
+            <div class="column is-one-quarter">
+              <figure class="image is-128x128">
+                <img class="is-rounded" src="https://avatars.githubusercontent.com/u/2352360?v=4" style="width: 128px; height: 128px; object-fit: cover;">
+              </figure>
+            </div>
+            <div class="column">
+              <a href="https://jstraub.github.io/" target="_blank">
+                <p class="title is-4">Julian Straub</p>
+                <p class="subtitle is-6">Spatial AI Research Scientist at Meta Reality Labs Research</p>
+              </a>
+            </div>
+          </div>
+          <p>
+            Julian Straub is a Lead Spatial AI Research Scientist at Meta Reality Labs Research (RLR) working on Computer Vision and 3D Perception.
+            Before joining RLR, Julian obtained his PhD on Nonparametric Directional Perception from MIT, where he was advised by John W. Fisher III and John Leonard within the CS and AI Laboratory (CSAIL).
+            On his way to MIT, Julian graduated from the Technische Universität München (TUM) and the Georgia Institute of Technology with a M.Sc.
+            He did his Diploma thesis in Eckehard Steinbach’s group with the NavVis founding team and in particular with Sebastian Hilsenbeck.
+            At Georgia Tech Julian had the pleasure to work with Frank Daellart’s group.
+          </p>
+        </div>
+      </div>
+
+      <br />
+
+      <div class="card">
+        <div class="card-content">
+          <div class="columns is-vcentered">
+            <div class="column is-one-quarter">
+              <figure class="image is-128x128">
+                <img class="is-rounded" src="https://angelxuanchang.github.io/files/angel.jpg" style="width: 128px; height: 128px; object-fit: cover;">
+              </figure>
+            </div>
+            <div class="column">
+              <a href="https://angelxuanchang.github.io/" target="_blank">
+                <p class="title is-4">Angel X. Chang</p>
+                <p class="subtitle is-6">Associate Professor at Simon Fraser University</p>
+              </a>
+            </div>
+          </div>
+          <p>
+            Angel Change is an Associate Professor at Simon Fraser University.
+            Prior to this, she was a visiting research scientist at Facebook AI Research and a research scientist at Eloquent Labs working on dialogue.
+            She received her Ph.D. in Computer Science from Stanford, where she was part of the Natural Language Processing Group and advised by Chris Manning.
+            Her research focuses on connecting language to 3D representations of shapes and scenes and grounding of language for embodied agents in indoor environments.
+            She has worked on methods for synthesizing 3D scenes and shapes from natural language, and various datasets for 3D scene understanding.
+            In general, she us interested in the semantics of shapes and scenes, the representation and acquisition of common sense knowledge, and reasoning using probabilistic models.
+            Her group also works on using machine learning for biodiversity monitoring, specifically with DNA barcodes as part of the larger BIOSCAN project.
+          </p>
+        </div>
+      </div>
+
+      <br />
+
+      <div class="card">
+        <div class="card-content">
+          <div class="columns is-vcentered">
+            <div class="column is-one-quarter">
+              <figure class="image is-128x128">
+                <img class="is-rounded" src="https://gradientspaces.stanford.edu/sites/g/files/sbiybj27761/files/styles/large_square/public/media/image/iro_armeni_26_copy_0.jpg">
+              </figure>
+            </div>
+            <div class="column">
+              <a href="https://gradientspaces.stanford.edu/" target="_blank">
+                <p class="title is-4">Iro Armeni</p>
+                <p class="subtitle is-6">Assistant Professor at Stanford University</p>
+              </a>
+            </div>
+          </div>
+          <p>
+            Iro Armeni is an Assistant Professor at Stanford University.
+            Her area of focus is on developing quantitative and data-driven methods that learn from real-world visual data to generate, predict, and simulate new or renewed built environments that place the human in the center.
+            Her goal is to create sustainable, inclusive, and adaptive built environments that can support our current and future physical and digital needs.
+            As part of her research vision, she is particularly interested in creating spaces that blend from the 100% physical (real reality) to the 100% digital (virtual reality) and anything in between, with the use of Mixed Reality.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <script>
+    function updateCountdowns() {
+        const countdownElements = document.querySelectorAll(".countdown");
+
+        countdownElements.forEach((element) => {
+            const targetDate = new Date(element.getAttribute("data-target")).getTime();
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference <= 0) {
+                element.innerHTML = "Countdown expired!";
+                return;
+            }
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            element.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        });
+    }
+
+    setInterval(updateCountdowns, 1000);
+    updateCountdowns(); // Initial call to avoid delay
+  </script>
+
+  <section class="section" id="dates">
+    <div class="container is-max-desktop content">
+      <h2 class="title" id="challenge">Challenge</h2>
+      <p>
+        This year, we host a challenge based on the <a href="https://scenefun3d.github.io" target="_blank" rel="noopener">SceneFun3D benchmark</a> and the <a href="https://insait-institute.github.io/articulate3d.github.io/" target="_blank" rel="noopener">Articulate3D dataset</a>. 
+        The challenge focuses on fine-grained functionality, affordance, and interaction understanding in 3D indoor environments. It consists of three tracks:
+      </p>
+
+      <span style="
+        background: linear-gradient(135deg, #dbe7ff 0%, #cddcff 100%);
+        color: #044285;
+        padding: 0.25em 0.5em;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        display: inline-block;
+        line-height: 1.4;
+      ">
+        🏆 Prize per challenge winner team: €1,000
+      </span>
+
+      <ul>
+        <li><b>Track 1:</b> Functionality Segmentation [SceneFun3D] <a href="https://scenefun3d.github.io/benchmark">Benchmark</a></li>
+        <li><b>Track 2:</b> Open-Vocabulary 3D Affordance Grounding [SceneFun3D] <a href="https://scenefun3d.github.io/benchmark">Benchmark</a></li>
+        <li><b>Track 3:</b> Interaction Understanding [Articulate3D]</li>
+      </ul>
+
+      <p>Below are key resources and important dates for each track.</p>
+
+      <h4>Tracks 1 & 2 [SceneFun3D]</h4>
+      <ul>
+        <li><a href="https://scenefun3d.github.io/documentation" target="_blank" rel="noopener">SceneFun3D Documentation</a></li>
+        <li><a href="https://eval.ai/web/challenges/challenge-page/2466/overview" target="_blank" rel="noopener">Benchmark Submission Portal</a></li>
+        <li><a href="https://scenefun3d.github.io/documentation/benchmarks/guidelines/" target="_blank" rel="noopener">Benchmark Submission Instructions</a></li>
+        <li><b>Submission Opens:</b> June 25, 2025</li>
+        <li><b>Submission Deadline:</b> October 14, 2025</li>
+      </ul>
+
+      <h4>Track 3 [Articulate3D]</h4>
+      <ul>
+        <li><a href="https://insait-institute.github.io/articulate3d.github.io/challenge.html" target="_blank" rel="noopener">Track 3 Documentation</a></li>
+        <li><a href="https://insait-institute.github.io/articulate3d.github.io" target="_blank" rel="noopener">Articulate3D</a></li>
+        <li><a href="https://art3dchallenge.jumpingcrab.com/web/challenges/challenge-page/21/overview" target="_blank" rel="noopener">Track 3 Submission Portal</a></li>
+        <li><b>Submission Opens:</b> August 1, 2025</li>
+        <li><b>Submission Deadline:</b> October 14, 2025</li>
+      </ul>
+      <!--<p>
+        <b>Challenge Winners</b>
+        
+      </p>-->
+
+      <p>Our workshop challenge is proudly supported by:</p>
+
+      <p align="center">
+        <img src="static/images/vivo.png" width="25%" style="margin: 20px; padding-right: 30px" />
+      </p>
+      <p align="center">
+        <img src="https://eval.ai/dist/images/evalai-logo.png" width="25%" style="margin: 20px; padding-right: 30px" />
+      </p>
+  </div>
+  </section>
+
+
+  <section class="section" id="dates">
+    <div class="container is-max-desktop content">
+      <h2 class="title" id="paper_track">Poster Presentations</h2>
+      All paper submission that are accepted have to option to be presented as posters during the workshop.
+      <br><br>
+
+      <u>For poster presenters</u>:
+      Please use <b>poster boards 148-157</b> in <b>Hall D (Level 3)</b> to put your poster.
+
+      <!--<br><br>
+      <u>Printing your poster</u>:
+      Please follow the official <a href="https://cvpr.thecvf.com/Conferences/2025/PosterPrintingInformation">CVPR 2025 guidelines for poster preparation</a>.
+      Note the <b>early bird</b> poster printing deadline of <b>May 25, 2025</b>.
+	-->
+    </div>
+  </section>
+
+
+  <section class="section" id="dates">
+    <div class="container is-max-desktop content">
+      <h2 class="title" id="paper_track">Paper Track</h2>
+      We invite <b>8-page full papers</b> for inclusion in the proceedings,
+      as well as <b>4-page extended abstracts</b>. Extended abstracts may present either new or previously published work
+      but will not be included in the proceedings.
+      4-page extended abstracts generally do not conflict with the dual submission policies of other conferences,
+      whereas 8-page full papers, if accepted, will be part of the proceedings and are therefore subject to the dual submission policy
+      (i.e., they cannot be under review for another conference at the same time or already accepted at another conference).
+      All submissions should be anonymous and follow the <a href="https://media.eventhosts.cc/Conferences/ICCV2025/ICCV2025-Author-Kit-Feb.zip">official ICCV 2025</a> guidelines.
+      <ul>
+        <li><b>Submission portal</b>: <a href="https://openreview.net/group?id=thecvf.com/ICCV/2025/Workshop/OpenSUN3D#tab-recent-activity">OpenReview</a></li>
+        <li><b>Paper submission opens</b>: June 23, 2025 </li>
+        <br>
+        <b>SUBMISSION DEADLINE 1 - Full Papers in Proceedings</b>
+        <li><b>Submission deadline 1 (full-papers in proceedings) </b>: July 4, 2025 (23:59 GMT) <i> (Countdown: <span class="countdown" data-target="July 1, 2025 23:59:59 UTC"></span>)</i>
+          <!-- <i> (Countdown: <span class="countdown" data-target="July 1, 2025 23:59:59 UTC"></span>)</i> -->
+        </li>
+        <li><b>Notification to authors (full-papers in proceedings)</b>: July 10, 2025 </li>
+        <li><b>Camera ready submission</b>: August 10, 2025 </li> 
+
+                <br>
+        <b>SUBMISSION DEADLINE 2 - Extended Abstracts and Non-Archival Full Papers (No Proceedings!)</b>
+        </li>
+        <li><b>Submission deadline 2 </b>: September 1, 2025 (23:59 GMT) <i> (Countdown: <span class="countdown" data-target="September 1, 2025 23:59:59 UTC"></span>)</i>
+          <!-- <i> (Countdown: <span class="countdown" data-target="July 1, 2025 23:59:59 UTC"></span>)</i> -->
+        
+        <li><b>Notification to authors</b>: September 15, 2025 </li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+    <section class="section" id="papers">
+    <div class="container is-max-desktop content">
+      <h2 class="title" id="relatedwork">Accepted Papers (Proceedings)</h2>
+      <ul>
+
+        <li>
+        <b>Open-Ended 3D Point Cloud Instance Segmentation</b> <em>(Poster #148)</em><br>
+        Phuc Nguyen, Minh Luu, Anh Tuan Tran, Cuong Pham, Khoi Nguyen<br>
+        </li>
+
+        <li>
+        <b>Sparse Multiview Open-Vocabulary 3D Detection</b> <em>(Poster #149)</em><br>
+        Olivier Moliner, Viktor Larsson, Kalle Åström<br>
+        </li>
+        </ul>
+
+        <h3>Extended Abstracts and Non-Archival Full Papers</h3>
+        <ul>
+
+        <li>
+        <b>RefAV: Towards Planning-Centric Scenario Mining</b> <em>(Poster #150)</em><br>
+        Cainan Davidson, Deva Ramanan, Neehar Peri<br>
+        </li>
+
+        <li>
+        <b>2HandedAfforder: Learning Precise Actionable Bimanual Affordances from Human Videos</b> <em>(Poster #151)</em><br>
+        Marvin Heidinger, Snehal Jauhri, Vignesh Prasad, Georgia Chalvatzaki<br>
+        </li>
+
+        <li>
+        <b>Learning 3D Scene Analogies with Neural Contextual Scene Maps</b> <em>(Poster #152)</em><br>
+        Junho Kim, Gwangtak Bae, Eun Sun Lee, Young Min Kim<br>
+        </li>
+
+        <li>
+        <b>Text-Embedded 3DGS as Enhanced Language Embeddings</b> <em>(Poster #153)</em><br>
+        Dahye Lee, Kim Yu-Ji, GeonU Kim, Jaesung Choe, Tae-Hyun Oh<br>
+        </li>
+
+        <li>
+        <b>PanSt3R: Multi-View Consistent Panoptic Segmentation</b> <em>(Poster #154)</em><br>
+        Lojze Zust, Yohann Cabon, Juliette Marrie, Leonid Antsfeld, Boris Chidlovskii, Jerome Revaud, Gabriela Csurka<br>
+        </li>
+
+        <li>
+        <b>BlendCLIP: Bridging Synthetic and Real Domains for Open-Set 3D Object Classification with Multimodal Pretraining</b> <em>(Poster #155)</em><br>
+        Ajinkya Khoche, Gergő László Nagy, Maciej Wozniak, Thomas Gustafsson, Patric Jensfelt<br>
+        </li>
+
+        <li>
+        <b>VISUAL-FF: Visual and Spatial Uncertainties in Any-Scene via Learned Feature Fields</b> <em>(Poster #156)</em><br>
+        Christian Maurer, Snehal Jauhri, Sophie Lueth, Georgia Chalvatzaki<br>
+        </li>
+
+        <li>
+        <b>Shape-Based Features Complement CLIP Features And Features Learned from Voxels in 3D Object Classification</b> <em>(Poster #157)</em><br>
+        Zhi Ji, Michael Guerzhoy<br>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+
+
+
+
+
+  <section class="section" id="Related Work">
+    <div class="container is-max-desktop content">
+      <h2 class="title" id="relatedwork">Related Works</h2>
+      Below is a collection of concurrent and related works in the field of open-set 3D scene understanding.
+      <ul>
+        <li><a href="https://concept-fusion.github.io/">ConceptFusion: Open-set Multimodal 3D Mapping</a> RSS'23
+        </li>
+        <li><a href="https://pengsongyou.github.io/openscene">OpenScene: 3D Scene Understanding with Open
+            Vocabularies</a> CVPR'23</li>
+        <li><a href="https://www.lerf.io">LERF: Language Embedded Radiance Fields</a> ICCV'23</li>
+        <li><a href="https://pfnet-research.github.io/distilled-feature-fields/">Decomposing NeRF for Editing
+            via Feature Field Distillation</a> NeurIPS'22</li>
+        <li><a href="https://semantic-abstraction.cs.columbia.edu/">Semantic Abstraction: Open-World 3D Scene
+            Understanding from 2D Vision-Language Models</a> CoRL'22</li>
+        <li><a href="https://rozdavid.github.io/scannet200">Language-Grounded Indoor 3D Semantic Segmentation in
+            the Wild</a> ECCV'22</li>
+        <li><a href="https://3dlg-hcvc.github.io/multiscan/">MultiScan: Scalable RGBD Scanning for 3D
+            Environments with Articulated Objects</a> NeurIPS'22</li>
+        <li><a href="https://github.com/NVlabs/ODISE">ODISE: Open-Vocabulary Panoptic Segmentation with
+            Text-to-Image Diffusion Models</a> CVPR'23</li>
+        <li><a href="https://github.com/Kunhao-Liu/3D-OVS">Weakly Supervised 3D Open-Vocabulary Segmentation</a>
+          NeurIPS'23</li>
+        <li><a href="https://arxiv.org/abs/2306.02329">Multi-CLIP: Contrastive Vision-Language Pre-training for
+            Question Answering tasks in 3D Scenes</a></li>
+        <li><a href="https://openmask3d.github.io">OpenMask3D: Open-Vocabulary 3D Instance Segmentation</a>
+          NeurIPS'23</li>
+        <li><a href="https://arxiv.org/abs/2303.04748">CLIP-FO3D: Learning Free Open-world 3D Scene
+            Representations from 2D Dense CLIP</li>
+        <li><a href="https://tsagkas.github.io/vl-fields/">VL-Fields: Towards Language-Grounded Neural Implicit
+            Spatial Representations</a> ICRA'23</li>
+        <li><a
+            href="https://openaccess.thecvf.com/content/CVPR2023/papers/Ding_PLA_Language-Driven_Open-Vocabulary_3D_Scene_Understanding_CVPR_2023_paper.pdf">PLA:
+            Language-Driven Open-Vocabulary 3D Scene Understanding</a> CVPR'23</li>
+        <li><a href="https://arxiv.org/abs/2304.00962">RegionPLC: Regional Point-Language Contrastive Learning
+            for Open-World 3D Scene Understanding</a></li>
+        <li><a href="https://arxiv.org/abs/2309.00616">OpenIns3D: Snap and Lookup for 3D open-vocabulary
+            Instance Segmentation</a></li>
+        <li><a href="https://concept-graphs.github.io/assets/pdf/2023-ConceptGraphs.pdf">ConceptGraphs:
+            Open-Vocabulary 3D Scene Graphs for Perception and Planning</a></li>
+        <li><a
+            href="https://openaccess.thecvf.com/content/CVPR2023/papers/Lu_Open-Vocabulary_Point-Cloud_Object_Detection_Without_3D_Annotation_CVPR_2023_paper.pdf">Open-Vocabulary
+            Point-Cloud Object Detection without 3D Annotation</a> CVPR'23</li>
+        <li><a href="https://github.com/yangcaoai/CoDA_NeurIPS2023">CoDA: Collaborative Novel
+            Box Discovery and Cross-modal Alignment for Open-vocabulary 3D Object Detection</a> NeurIPS'23
+        <li><a href="https://scenefun3d.github.io">SceneFun3D: Fine-Grained Functionality and Affordance Understanding
+            in 3D Scenes</a> CVPR'24
+        </li>
+        <li>
+          <a href="https://github.com/MIT-SPARK/Clio">
+          Clio: Real-time Task-Driven Open-Set 3D Scene Graphs</a> RA-L'24
+        </li>
+        <li>
+          <a href="https://nvlabs.github.io/Mosaic3D/">
+          Mosaic3D: Foundation Dataset and Model for Open-Vocabulary 3D Segmentation</a> CVPR'25
+        </li>
+        <br>
+      </ul>
+      and many more ...       Please
+      feel free to reach out to add your own work (<a href="mailto:francis.engelmann@ai.ethz.ch">francis.engelmann@ai.ethz.ch</a>).
+
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="Organizers">
+    <div class="container is-max-desktop content">
+      <h2 class="title" id="organizers">Organizers</h2>
+
+      <div class="columns is-centered is-variable is-0">
+
+        <div class="column is-one-fifth">
+          <a href="http://francisengelmann.github.io">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="./static/img/francis.jpg" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Francis Engelmann</p>
+                    <p class="subtitle is-7">Stanford</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="column is-one-fifth">
+          <a href="https://aycatakmaz.github.io">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="./static/img/ayca.jpg" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Ayca Takmaz</p>
+                    <p class="subtitle is-7">ETH Zurich</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="column is-one-fifth">
+          <a href="https://alexdelitzas.github.io/">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="./static/img/alex.jpeg" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Alex Delitzas</p>
+                    <p class="subtitle is-7">ETH Zurich, MPI</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="column is-one-fifth">
+          <a href="https://elisabettafedele.github.io/">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="./static/img/elisabetta.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Elisabetta Fedele</p>
+                    <p class="subtitle is-7">ETH Zurich</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="column is-one-fifth">
+          <a href="https://insait.ai/anna-maria-halacheva/">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="./static/img/am.jpg" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Anna-Maria Halacheva</p>
+                    <p class="subtitle is-7">INSAIT</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="columns is-centered is-variable is-0">
+
+        <div class="column is-one-fifth">
+          <a href="https://katadam.github.io/">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="./static/img/kata.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Katerina Adam</p>
+                    <p class="subtitle is-7">NTUA</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="column is-one-fifth">
+          <a href="https://insait.ai/yang-miao/">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="./static/img/miau.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Yang Miao</p>
+                    <p class="subtitle is-7">INSAIT</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="column is-one-fifth">
+          <a href="https://jannicozaech.github.io/">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="./static/img/Nico_Zaech.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Jan-Nico Zaech</p>
+                    <p class="subtitle is-7">INSAIT</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="column is-one-fifth">
+          <a href="https://zuriabauer.com/">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="./static/img/ZBauer.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Bauer Zuria</p>
+                    <p class="subtitle is-7">ETH Zurich</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="column is-one-fifth">
+          <a href="https://scholar.google.com/citations?user=dfjN3YAAAAAJ">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="./static/img/johanna.jpg" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Johanna Wald</p>
+                    <p class="subtitle is-7">Google</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+
+
+      <div class="columns is-centered is-variable is-0">
+        
+        <div class="column is-one-fifth">
+          <a href="https://insait.ai/dr-danda-paudel/">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="./static/img/danda.jpg" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Danda Pani Paudel</p>
+                    <p class="subtitle is-7">INSAIT</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="column is-one-fifth">
+          <a href="https://orlitany.github.io">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="./static/img/or.jpg" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Or Litany</p>
+                    <p class="subtitle is-7">NVIDIA, Technion</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="column is-one-fifth">
+          <a href="https://federicotombari.github.io">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="./static/img/federico.jpg" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Federico Tombari</p>
+                    <p class="subtitle is-7">TUM, Google</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="column is-one-fifth">
+          <a href="https://people.inf.ethz.ch/marc.pollefeys/">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="./static/img/marc.jpg" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Marc Pollefeys</p>
+                    <p class="subtitle is-7">ETHZ, Microsoft</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="column is-one-fifth">
+          <a href="https://geometry.stanford.edu/?member=guibas">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img class="is-rounded" src="./static/img/leonidas.jpg" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content" style="overflow-x: unset;">
+                    <p class="title is-7 is-spaced">Leonidas Guibas</p>
+                    <p class="subtitle is-7">Stanford</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+      </div>
+
+    </div>
+  </section>
+
+  <section class="hero">
+    <div class="hero-body" style="background-color: #1C2D59;">
+      <!-- <div class="container" style="background-color: #333"> -->
+      <div class="content" align="center">
+        <img src="static/images/eth_logo_kurz_neg.png" style="height: 50px;" />
+        <img src="https://cvpr.thecvf.com/static/core/img/cvpr-navbar-logo.svg" style="height: 50px;" />
+        <img src="https://identity.stanford.edu/wp-content/uploads/sites/3/2020/06/wordmark-nospace-white.png" style="padding: 10px; height: 50px;" />
+      </div>
+    </div>
+  </section>
+
+</body>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/jquery.mobile.custom.min.js"></script>
+<script src="js/main.js"></script>
+
+</html>
