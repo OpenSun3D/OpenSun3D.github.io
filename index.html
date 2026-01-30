@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/index_new.css">
   <link rel="icon" href="./static/images/favicon.svg">
   <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
   <script src="js/modernizr.js"></script> <!-- Modernizr -->
@@ -71,12 +71,114 @@ For intelligent agents to thrive in the physical world, they must not only perce
 This year’s workshop unites leading researchers advancing world models and spatial intelligence, from 3D perception and scene understanding to generative world representations.
 Through keynotes and a challenge on open 3D interaction perception, we will explore how machines learn to reason about and engage with their environments.
 The workshop aims to shape the next generation of spatially grounded AI, bridging scientific discovery, practical deployment, and responsible innovation.
-
-
-<br /><br /><br />More information on paper submission and challenge track will follow soon.
-      </div>
+</div>
     </div>
   </section>
+
+  <section class="section" id="global-timeline">
+    <div class="container is-max-desktop content">
+      <h2 class="title is-4">
+        Important Dates
+      </h2>
+
+      <div class="timeline-horizontal">
+
+        <!-- Openings -->
+        <div class="timeline-item" data-date="2026-01-15">
+          <a class="button is-small is-dark is-outlined" href="#challenge">Challenge</a>
+          <p>Challenges Open</p>
+          <time>Jan 15, 2026</time>
+        </div>
+
+        <div class="timeline-item" data-date="2026-01-15">
+          <a class="button is-small is-link is-outlined" href="#paper_track">Paper Track</a>
+          <p>Paper Submissions Open</p>
+          <time>Jan 15, 2026</time>
+        </div>
+
+        <!-- Paper deadlines -->
+        <div class="timeline-item" data-date="2026-03-15">
+          <a class="button is-small is-link is-outlined" href="#paper_track">Paper Track</a>
+          <p>Proceedings Track Deadline</p>
+          <time>Mar 15, 2026</time>
+        </div>
+
+        <div class="timeline-item" data-date="2026-04-20">
+          <a class="button is-small is-link is-outlined" href="#paper_track">Paper Track</a>
+          <p>Extended Abstract Deadline</p>
+          <time>Apr 20, 2026</time>
+        </div>
+
+        <!-- Challenge deadline -->
+        <div class="timeline-item" data-date="2026-05-29">
+          <a class="button is-small is-dark is-outlined" href="#challenge">Challenge</a>
+          <p>Challenges Deadline</p>
+          <time>May 29, 2026</time>
+        </div>
+
+        <!-- Workshop -->
+        <div class="timeline-item" data-date="2026-06-03">
+          <a class="button is-small is-warning" href="#speakers">Workshop</a>
+          <p>Workshop</p>
+          <time>June 3, 2026</time>
+        </div>
+
+      </div>
+
+      <div class="next-deadline-box">
+        ⏳ <strong>Next deadline:</strong>
+        <span id="next-deadline-label"></span>
+        —
+        <span id="next-deadline-countdown"></span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(".timeline-item");
+    const now = new Date();
+
+    let nextItem = null;
+
+    items.forEach(item => {
+      const dateStr = item.dataset.date;
+      const date = new Date(dateStr + "T23:59:59");
+
+      if (date < now) {
+        item.classList.add("past");
+      } else if (!nextItem) {
+        nextItem = { el: item, date };
+        item.classList.add("upcoming");
+      }
+    });
+
+    if (nextItem) {
+      const label = nextItem.el.querySelector("p").innerText;
+      document.getElementById("next-deadline-label").innerText = label;
+
+      function updateCountdown() {
+        const diff = nextItem.date - new Date();
+        if (diff <= 0) return;
+
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const m = Math.floor((diff / (1000 * 60)) % 60);
+
+        document.getElementById("next-deadline-countdown").innerText =
+          `${d}d ${h}h ${m}m`;
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 60000);
+    }
+  });
+  </script>
+
+
+
 
   <!-- <section class="section" style="margin-top: -50px">
     <div class="container is-max-desktop">
@@ -129,6 +231,8 @@ The workshop aims to shape the next generation of spatially grounded AI, bridgin
       </section>
     </div>
   </section>
+
+  
 
   <section class="section" id="Papers">
     <div class="container is-max-desktop content">
@@ -365,8 +469,8 @@ The workshop aims to shape the next generation of spatially grounded AI, bridgin
     </div>
   </section>
 
+  
 
-<!--
   <script>
     function updateCountdowns() {
         const countdownElements = document.querySelectorAll(".countdown");
@@ -393,7 +497,7 @@ The workshop aims to shape the next generation of spatially grounded AI, bridgin
     setInterval(updateCountdowns, 1000);
     updateCountdowns(); // Initial call to avoid delay
   </script>
-
+<!--
   <section class="section" id="dates">
     <div class="container is-max-desktop content">
       <h2 class="title" id="challenge">Challenge</h2>
@@ -493,6 +597,221 @@ The workshop aims to shape the next generation of spatially grounded AI, bridgin
       </ul>
     </div>
   </section> -->
+  <section class="section" id="paper_track">
+    <div class="container is-max-desktop content">
+
+    <h2 class="title">
+      Paper Track
+      <span style="
+        font-size: 0.6em;
+        color: white;
+        background-color: #28a745;
+        border-radius: 4px;
+        padding: 0.2em 0.5em;
+        vertical-align: super;
+      ">Open</span>
+    </h2>
+    <table class="table is-fullwidth is-striped">
+      <thead>
+        <tr>
+          <th>Submission Type</th>
+          <th>Length</th>
+          <th>In Proceedings</th>
+          <th>Deadline</th>
+          <th>Policies</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Full Paper</td>
+          <td>8 pages</td>
+          <td>Yes</td>
+          <td><strong>Mar 15, 2026</strong></td>
+          <td>Anonymous, subject to dual-submission rules.</td>
+        </tr>
+        <tr>
+          <td>Extended Abstract</td>
+          <td>4 pages</td>
+          <td>No</td>
+          <td><strong>Apr 20, 2026</strong></td>
+          <td>Anonymous, may include previously published work.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="margin-top: 1rem; margin-bottom: 1rem;">
+      <a class="button_submit" href="https://openreview.net/group?id=thecvf.com/CVPR/2026/Workshop/OpenSUN3D#tab-recent-activity" target="_blank">
+        Submit via OpenReview
+      </a>
+    </div>
+    <p>
+        All submissions must be anonymous and follow the
+        <a href="https://cvpr.thecvf.com/Conferences/2026/AuthorGuidelines">CVPR 26 author guidelines</a>.
+      </p>
+
+
+
+    <div class="columns is-multiline">
+
+      <!-- Deadline 1 -->
+      <div class="column is-6">
+        <div class="card">
+          <div class="card-content">
+            <h4 class="title is-5">
+              Submission Deadline 1 — Full Papers (Proceedings)
+            </h4>
+
+            <ul>
+              <li>
+                <i class="fa fa-flag-checkered"></i>
+                <strong>Submission deadline:</strong>
+                March 15, 2026 (23:59 GMT)
+                <br>
+                <i class="is-size-6">
+                  Countdown:
+                  <span class="countdown" data-target="March 15, 2026 23:59:59 UTC"></span>
+                </i>
+              </li>
+              <li>
+                <i class="fa fa-envelope"></i>
+                <strong>Notification to authors:</strong> March 18, 2026
+              </li>
+              <li>
+                <i class="fa fa-upload"></i>
+                <strong>Camera-ready submission:</strong> April 10, 2026
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Deadline 2 -->
+      <div class="column is-6">
+        <div class="card">
+          <div class="card-content">
+            <h4 class="title is-5">
+              Submission Deadline 2 — Extended Abstracts & Non-Archival Papers
+            </h4>
+
+            <ul>
+              <li>
+                <i class="fa fa-flag-checkered"></i>
+                <strong>Submission deadline:</strong>
+                April 20, 2026 (23:59 GMT)
+                <br>
+                <i class="is-size-6">
+                  Countdown:
+                  <span class="countdown" data-target="April 20, 2026 23:59:59 UTC"></span>
+                </i>
+              </li>
+              <li>
+                <i class="fa fa-envelope"></i>
+                <strong>Notification to authors:</strong> April 25, 2026
+              </li>
+              <li>
+                May include previously published work.
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <section class="section" id="challenge">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Challenge Track 
+        <span style="
+          font-size: 0.6em;
+          color: white;
+          background-color: #28a745;
+          border-radius: 4px;
+          padding: 0.2em 0.5em;
+          vertical-align: super;
+        ">Open</span>
+      </h2>
+
+      <p class="has-text-justified">
+        We host a 3-track challenge based on the
+        <a href="https://scenefun3d.github.io" target="_blank" rel="noopener">SceneFun3D benchmark</a>
+        and the
+        <a href="https://insait-institute.github.io/articulate3d.github.io/" target="_blank" rel="noopener">Articulate3D dataset</a>.
+        The challenge focuses on fine-grained functionality, affordance, and interaction understanding in 3D indoor environments.
+      </p>
+
+      <!-- 
+      <div class="notification is-info is-light">
+        🏆 <strong>Prize:</strong> €1,000 per challenge-winning team
+      </div>
+      -->
+
+      <h4 class="title is-5">Tracks Overview</h4>
+      <ul>
+        <li><strong>Track 1:</strong> Functionality Segmentation (SceneFun3D)</li>
+        <li><strong>Track 2:</strong> Open-Vocabulary 3D Affordance Grounding (SceneFun3D)</li>
+        <li><strong>Track 3:</strong> Interaction Understanding (Articulate3D)</li>
+      </ul>
+
+      <br>
+
+      <div class="columns is-multiline">
+
+        <!-- Track 1 & 2 -->
+        <div class="column is-6">
+          <div class="card">
+            <div class="card-content">
+              <h4 class="title is-5">Tracks 1 & 2 — SceneFun3D</h4>
+
+              <p><strong>Resources</strong></p>
+              <div class="buttons">
+                <a class="button is-small" href="https://scenefun3d.github.io/documentation" target="_blank">SceneFun3D Documentation</a>
+                <a class="button is-small" href="https://scenefun3d.github.io/documentation/benchmarks/guidelines/" target="_blank">Submission Instructions</a>
+                <a class="button is-small" href="https://eval.ai/web/challenges/challenge-page/2466/overview" target="_blank">Submission Portal</a>
+              </div>
+
+              <p><strong>Important Dates</strong></p>
+              <ul>
+                <li><i class="fa fa-calendar"></i> Challenge start: <strong>Jan 15, 2026</strong></li>
+                <li><i class="fa fa-flag-checkered"></i> Submission deadline: <strong>May 29, 2026</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Track 3 -->
+        <div class="column is-6">
+          <div class="card">
+            <div class="card-content">
+              <h4 class="title is-5">Track 3 — Articulate3D</h4>
+
+              <p><strong>Resources</strong></p>
+              <div class="buttons">
+                <a class="button is-small" href="https://insait-institute.github.io/articulate3d.github.io/challenge.html" target="_blank">Articulate3D Challenge Website</a>
+                <a class="button is-small" href="https://insait-institute.github.io/articulate3d.github.io" target="_blank">Dataset Website</a>
+                <a class="button is-small" href="https://art3dchallenge.jumpingcrab.com/web/challenges/challenge-page/21/overview" target="_blank">Submission Portal</a>
+              </div>
+
+              <p><strong>Important Dates</strong></p>
+              <ul>
+                <li><i class="fa fa-calendar"></i> Submission opens: <strong>Jan 15, 2026</strong></li>
+                <li><i class="fa fa-flag-checkered"></i> Submission deadline: <strong>May 29, 2026</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!--
+      <p class="mt-5">Our workshop challenge is proudly supported by:</p>
+
+      <div class="has-text-centered">
+        <img src="static/images/vivo.png" width="25%" style="margin: 20px;">
+        <img src="https://eval.ai/dist/images/evalai-logo.png" width="25%" style="margin: 20px;">
+      </div>
+      -->
+    </div>
+  </section>
+
 
 
   <section class="section" id="Related Work">
