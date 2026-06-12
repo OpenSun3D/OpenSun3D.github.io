@@ -1,5 +1,8 @@
 body {
   font-family: 'Lato', Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(202, 221, 255, 0.28), transparent 34%),
+    linear-gradient(180deg, #f4f7fb 0%, #ffffff 24%, #f8fbff 100%);
 }
 
 .rcorners1 {
@@ -160,6 +163,114 @@ body {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   color:#fff
 }
+
+.nav-glass-shell {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.9rem;
+  margin: 0 auto;
+  padding: 1rem 1.2rem;
+  max-width: 980px;
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.26);
+  box-shadow: 0 14px 32px rgba(17, 37, 74, 0.1);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  position: relative;
+  z-index: 20;
+}
+
+.nav-glass-shell .nav-glass-button {
+  min-height: 2.85rem;
+  padding: 0.7rem 1.35rem;
+  border: 1px solid rgba(255, 255, 255, 0.44);
+  border-radius: 999px;
+  background: rgba(28, 45, 89, 0.86);
+  color: #fff;
+  letter-spacing: 0.01em;
+  box-shadow: none;
+  transition: none;
+}
+
+.nav-glass-shell .nav-glass-button:hover,
+.nav-glass-shell .nav-glass-dropdown:hover > .nav-glass-button {
+  color: #fff;
+  background: rgba(28, 45, 89, 0.9);
+  transform: none;
+  box-shadow: none;
+}
+
+.nav-glass-shell .nav-glass-button:focus,
+.nav-glass-shell .nav-glass-button:active {
+  color: #fff;
+  background: rgba(28, 45, 89, 0.92);
+  transform: none;
+  box-shadow: none;
+}
+
+.nav-glass-dropdown {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.nav-glass-shell .dropdown-content {
+  top: calc(100% + 0.15rem);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 190px;
+  padding: 0.8rem 0.95rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 12px 24px rgba(17, 37, 74, 0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 30;
+}
+
+.nav-glass-shell .dropdown-content a {
+  display: block;
+  padding: 0.45rem 0.15rem;
+  color: #1c2d59;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: none;
+}
+
+.nav-glass-shell .dropdown-content a:hover {
+  background: rgba(28, 45, 89, 0.08);
+  color: #102043;
+  padding-left: 0.15rem;
+}
+
+.nav-glass-shell .dropdown-content br {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-glass-shell {
+    gap: 0.7rem;
+    padding: 0.9rem;
+    border-radius: 24px;
+  }
+
+  .nav-glass-shell .nav-glass-button {
+    width: 100%;
+  }
+
+  .nav-glass-dropdown {
+    width: 100%;
+  }
+
+  .nav-glass-shell .dropdown-content {
+    width: 100%;
+  }
+}
+
 #challenge .card,
 #paper_track .card {
   background: linear-gradient(90deg, #ffffff, #f7f9ff);
