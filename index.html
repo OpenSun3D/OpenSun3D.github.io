@@ -27,7 +27,7 @@
           <div class="column has-text-centered">
             <h1 class="title is-1 outline" style="color: white">OpenSUN3D</h1>
             <p class="title is-4 outline" style="color: white">7<sup>th</sup> Workshop on Open-World 3D Scene Understanding and Representations</p>
-            <h1 class="is-is-5 outline" style="color: white"><b>September 8/9th in conjunction with ECCV 2026 in Malmö, Sweden.</b></h1>
+            <h1 class="is-is-5 outline" style="color: white"><b>September 8-9, 2026 in conjunction with ECCV 2026 in Malmö, Sweden.</b></h1>
             <!-- <h1 class="is-is-5 outline" style="color: white"><b>Room: TBA</b></h1> -->
           </div>
         </div>
@@ -76,7 +76,7 @@ The workshop aims to shape the next generation of spatially grounded AI, bridgin
     </div>
   </section>
 
-  <!-- <section class="section" id="global-timeline">
+  <section class="section" id="global-timeline">
     <div class="container is-max-desktop content">
       <h2 class="title is-4">
         Important Dates
@@ -84,40 +84,40 @@ The workshop aims to shape the next generation of spatially grounded AI, bridgin
 
       <div class="timeline-horizontal">
 
-        <div class="timeline-item" data-date="2026-01-15">
+        <div class="timeline-item" data-date="2026-06-15">
           <a class="button is-small is-dark is-outlined" href="#challenge">Challenge</a>
           <p>Challenges Open</p>
-          <time>Jan 15, 2026</time>
+          <time>Jun 15, 2026</time>
         </div>
 
-        <div class="timeline-item" data-date="2026-01-15">
+        <div class="timeline-item" data-date="2026-06-15">
           <a class="button is-small is-link is-outlined" href="#paper_track">Paper Track</a>
           <p>Paper Submissions Open</p>
-          <time>Jan 15, 2026</time>
+          <time>Jun 15, 2026</time>
         </div>
 
-        <div class="timeline-item" data-date="2026-03-12">
+        <div class="timeline-item" data-date="2026-08-01">
           <a class="button is-small is-link is-outlined" href="#paper_track">Paper Track</a>
           <p>Proceedings Track Deadline</p>
-          <time>Mar 12, 2026</time>
+          <time>Aug 1, 2026</time>
         </div>
 
-        <div class="timeline-item" data-date="2026-04-20">
+        <div class="timeline-item" data-date="2026-08-01">
           <a class="button is-small is-link is-outlined" href="#paper_track">Paper Track</a>
           <p>Non-Archival Track Deadline</p>
-          <time>Apr 20, 2026</time>
+          <time>Aug 1, 2026</time>
         </div>
 
-        <div class="timeline-item" data-date="2026-05-29">
+        <div class="timeline-item" data-date="2026-08-25">
           <a class="button is-small is-dark is-outlined" href="#challenge">Challenge</a>
           <p>Challenges Deadline</p>
-          <time>May 29, 2026</time>
+          <time>Aug 25, 2026</time>
         </div>
 
-        <div class="timeline-item" data-date="2026-06-03">
+        <div class="timeline-item" data-date="2026-09-08">
           <a class="button is-small is-warning" href="#speakers">Workshop</a>
           <p>Workshop</p>
-          <time>June 3rd, 2026</time>
+          <time>Sep 8-9, 2026</time>
         </div>
 
       </div>
@@ -131,34 +131,49 @@ The workshop aims to shape the next generation of spatially grounded AI, bridgin
 
     </div>
   </section>
- -->
 
   <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const items = document.querySelectorAll(".timeline-item");
+    const items = Array.from(document.querySelectorAll(".timeline-item"));
     const now = new Date();
 
     let nextItem = null;
 
-    items.forEach(item => {
-      const dateStr = item.dataset.date;
-      const date = new Date(dateStr + "T23:59:59");
+    const timelineItems = items
+      .map(item => {
+        const [year, month, day] = item.dataset.date.split("-").map(Number);
+        const date = new Date(year, month - 1, day, 23, 59, 59);
+        return { el: item, date };
+      })
+      .sort((a, b) => a.date - b.date);
 
-      if (date < now) {
-        item.classList.add("past");
+    timelineItems.forEach(item => {
+      item.el.classList.remove("past", "upcoming");
+
+      if (item.date < now) {
+        item.el.classList.add("past");
       } else if (!nextItem) {
-        nextItem = { el: item, date };
-        item.classList.add("upcoming");
+        nextItem = item;
       }
     });
 
     if (nextItem) {
-      const label = nextItem.el.querySelector("p").innerText;
+      timelineItems
+        .filter(item => item.date.getTime() === nextItem.date.getTime())
+        .forEach(item => item.el.classList.add("upcoming"));
+
+      const label = timelineItems
+        .filter(item => item.date.getTime() === nextItem.date.getTime())
+        .map(item => item.el.querySelector("p").innerText)
+        .join(" / ");
       document.getElementById("next-deadline-label").innerText = label;
 
       function updateCountdown() {
         const diff = nextItem.date - new Date();
-        if (diff <= 0) return;
+        if (diff <= 0) {
+          document.getElementById("next-deadline-countdown").innerText = "Today";
+          return;
+        }
 
         const d = Math.floor(diff / (1000 * 60 * 60 * 24));
         const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
@@ -170,6 +185,9 @@ The workshop aims to shape the next generation of spatially grounded AI, bridgin
 
       updateCountdown();
       setInterval(updateCountdown, 60000);
+    } else {
+      document.getElementById("next-deadline-label").innerText = "All deadlines have passed";
+      document.getElementById("next-deadline-countdown").innerText = "";
     }
   });
   </script>
@@ -621,14 +639,14 @@ The workshop aims to shape the next generation of spatially grounded AI, bridgin
           <td>Proceedings Track</td>
           <td>8 pages</td>
           <td>Yes</td>
-          <td><strong>TBD</strong></td>
+          <td><strong>August 1, 2026</strong></td>
           <td>Anonymous, subject to dual-submission rules.</td>
         </tr>
         <tr>
           <td>Non-Archival Track</td>
           <td>4 / 8 pages</td>
           <td>No</td>
-          <td><strong>TBD</strong></td>
+          <td><strong>August 1, 2026</strong></td>
           <td>Anonymous, may include previously published work.</td>
         </tr>
       </tbody>
@@ -662,15 +680,15 @@ The workshop aims to shape the next generation of spatially grounded AI, bridgin
             <ul>
               <li>
                 <i class="fa fa-flag-checkered"></i>
-                <strong>Submission deadline:</strong> August 5th, 2026
+                <strong>Submission deadline:</strong> August 1, 2026
               </li>
               <li>
                 <i class="fa fa-envelope"></i>
-                <strong>Notification to authors:</strong> August 10th, 2026
+                <strong>Notification to authors:</strong> August 10, 2026
               </li>
               <li>
                 <i class="fa fa-upload"></i>
-                <strong>Camera-ready submission:</strong> August 15th, 2026
+                <strong>Camera-ready submission:</strong> August 15, 2026
               </li>
             </ul>
           </div>
@@ -691,11 +709,11 @@ The workshop aims to shape the next generation of spatially grounded AI, bridgin
               <li>
                 <i class="fa fa-flag-checkered"></i>
                 <strong>Submission deadline:</strong>
-                TBD
+                August 1, 2026
               </li>
               <li>
                 <i class="fa fa-envelope"></i>
-                <strong>Notification to authors:</strong> TBD
+                <strong>Notification to authors:</strong> August 10, 2026
               </li>
               <li>
                 May include previously published work.
@@ -809,8 +827,8 @@ The workshop aims to shape the next generation of spatially grounded AI, bridgin
 
               <p><strong>Important Dates</strong></p>
               <ul>
-                <li><i class="fa fa-calendar"></i> Challenge start: <strong>TBD</strong></li>
-                <li><i class="fa fa-flag-checkered"></i> Submission deadline: <strong>TBD</strong></li>
+                <li><i class="fa fa-calendar"></i> Challenge start: <strong>June 15, 2026</strong></li>
+                <li><i class="fa fa-flag-checkered"></i> Submission deadline: <strong>August 25, 2026</strong></li>
               </ul>
             </div>
           </div>
@@ -831,8 +849,8 @@ The workshop aims to shape the next generation of spatially grounded AI, bridgin
 
               <p><strong>Important Dates</strong></p>
               <ul>
-                <li><i class="fa fa-calendar"></i> Submission opens: <strong>TBD</strong></li>
-                <li><i class="fa fa-flag-checkered"></i> Submission deadline: <strong>TBD</strong></li>
+                <li><i class="fa fa-calendar"></i> Submission opens: <strong>June 15, 2026</strong></li>
+                <li><i class="fa fa-flag-checkered"></i> Submission deadline: <strong>August 25, 2026</strong></li>
               </ul>
             </div>
           </div>
