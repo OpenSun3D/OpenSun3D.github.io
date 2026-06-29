@@ -64,6 +64,160 @@
     </div>
   </section>
   
+  <style>
+    .announce-wrap { padding: 1.5rem 1.5rem 0; }
+    .announce {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-radius: 18px;
+      padding: 2px;
+      background: linear-gradient(120deg, #00d4ff, #1C2D59 50%, #2b6cb0);
+      box-shadow: 0 14px 40px rgba(28, 45, 89, 0.22);
+      overflow: hidden;
+    }
+    .announce-glow {
+      position: absolute;
+      inset: -50%;
+      background: conic-gradient(from 0deg, transparent 0deg, rgba(0,212,255,0.30) 55deg, transparent 130deg, rgba(43,108,176,0.30) 220deg, transparent 300deg);
+      animation: announce-spin 11s linear infinite;
+      z-index: 0;
+    }
+    @keyframes announce-spin { to { transform: rotate(360deg); } }
+    .announce-inner {
+      position: relative;
+      z-index: 1;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.6rem 1.9rem;
+    }
+    .announce-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .announce-pill {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #053246;
+      padding: 0.3em 0.85em;
+      border-radius: 999px;
+      background: linear-gradient(120deg, #00d4ff, #67e8f9);
+      box-shadow: 0 0 0 0 rgba(0,212,255,0.45);
+      animation: announce-pulse 2.2s ease-in-out infinite;
+    }
+    @keyframes announce-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(0,212,255,0.45); }
+      50% { box-shadow: 0 0 0 8px rgba(0,212,255,0); }
+    }
+    .announce-headline {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #1C2D59;
+      letter-spacing: 0.2px;
+    }
+    .announce-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.9rem;
+      margin-bottom: 1.1rem;
+    }
+    @media (max-width: 768px) { .announce-cards { grid-template-columns: 1fr; } }
+    .announce-item {
+      display: block;
+      border: 1px solid #e2e8f4;
+      border-radius: 12px;
+      padding: 1rem 1.1rem;
+      background: linear-gradient(180deg, #f8faff, #ffffff);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+    .announce-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(28, 45, 89, 0.14);
+      border-color: #c7d4ee;
+    }
+    .announce-item .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      color: #2b6cb0;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+    .announce-item .eyebrow .tag-new {
+      color: #053246;
+      background: #00d4ff;
+      border-radius: 4px;
+      padding: 0.05em 0.4em;
+      font-size: 0.66rem;
+      letter-spacing: 0.5px;
+    }
+    .announce-item h4 { margin: 0.35rem 0 0.25rem; color: #1C2D59; font-size: 1.08rem; font-weight: 800; }
+    .announce-item p { margin: 0; font-size: 0.9rem; color: #555; line-height: 1.45; }
+    .announce-prize {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem 0.8rem;
+      text-align: center;
+      background: linear-gradient(135deg, #fffae9, #ffeec2);
+      border: 1px solid #f0d98a;
+      border-radius: 12px;
+      padding: 0.85rem 1.1rem;
+      color: #8a6510;
+      font-size: 0.96rem;
+    }
+    .announce-prize img { height: 22px; width: auto; vertical-align: middle; }
+  </style>
+
+  <div class="announce-wrap">
+    <div class="announce">
+      <div class="announce-glow"></div>
+      <div class="announce-inner">
+
+        <div class="announce-top">
+          <span class="announce-pill">★ Now Open</span>
+          <span class="announce-headline">Open for submissions</span>
+        </div>
+
+        <div class="announce-cards">
+          <a class="announce-item" href="#paper_track">
+            <span class="eyebrow"><i class="fa fa-file-text"></i> Paper Track</span>
+            <h4>Call for Papers</h4>
+            <p>Proceedings &amp; non-archival submissions &mdash; deadline Aug 1, 2026.</p>
+          </a>
+          <a class="announce-item" href="#paper_track">
+            <span class="eyebrow"><i class="fa fa-brain"></i> SpatialMem <span class="tag-new">NEW</span></span>
+            <h4>Huawei SpatialMem Track</h4>
+            <p>New sponsored paper sub-track on memory-centric spatial intelligence.</p>
+          </a>
+          <a class="announce-item" href="#challenge">
+            <span class="eyebrow"><i class="fa fa-trophy"></i> Challenge</span>
+            <h4>3-Track Challenge</h4>
+            <p>Functionality, affordance &amp; interaction understanding in 3D.</p>
+          </a>
+        </div>
+
+        <div class="announce-prize">
+          🏆 <strong>Prizes for paper &amp; challenge winners</strong> &mdash; provided by
+          <img src="https://upload.wikimedia.org/wikipedia/en/0/04/Huawei_Standard_logo.svg" alt="Huawei" />
+          <em>&middot; prizes announced soon.</em>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
   <section class="section" id="Motivation">
     <div class="container is-max-desktop content">
       <h2 class="title">Introduction</h2>
@@ -610,6 +764,109 @@ The workshop aims to shape the next generation of spatially grounded AI, bridgin
       </ul>
     </div>
   </section> -->
+  <style>
+    .spatialmem-card {
+      position: relative;
+      border-radius: 16px;
+      padding: 2px;
+      background: linear-gradient(120deg, #00d4ff, #1C2D59 55%, #2b6cb0);
+      box-shadow: 0 10px 30px rgba(28, 45, 89, 0.18);
+      overflow: hidden;
+    }
+    .spatialmem-glow {
+      position: absolute;
+      inset: -40%;
+      background: conic-gradient(from 0deg, transparent 0deg, rgba(0,212,255,0.35) 60deg, transparent 140deg, rgba(43,108,176,0.35) 220deg, transparent 300deg);
+      animation: spatialmem-spin 9s linear infinite;
+      z-index: 0;
+    }
+    @keyframes spatialmem-spin { to { transform: rotate(360deg); } }
+    .spatialmem-body {
+      position: relative;
+      z-index: 1;
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 1.5rem 1.75rem;
+    }
+    .spatialmem-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 0.9rem;
+    }
+    .spatialmem-titlewrap { display: flex; align-items: center; gap: 0.6rem; }
+    .spatialmem-title {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #1C2D59;
+      letter-spacing: 0.2px;
+    }
+    .spatialmem-new {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #053246;
+      padding: 0.28em 0.7em;
+      border-radius: 999px;
+      background: linear-gradient(120deg, #00d4ff, #67e8f9);
+      box-shadow: 0 0 0 rgba(0,212,255,0.5);
+      animation: spatialmem-pulse 2.2s ease-in-out infinite;
+    }
+    @keyframes spatialmem-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(0,212,255,0.45); }
+      50% { box-shadow: 0 0 0 7px rgba(0,212,255,0); }
+    }
+    .spatialmem-sponsor {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .spatialmem-sponsor img { height: 26px; width: auto; }
+    .spatialmem-intro {
+      color: #333;
+      line-height: 1.55;
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+    .spatialmem-awards {
+      background: linear-gradient(135deg, #fffae9, #ffeec2);
+      border: 1px solid #f0d98a;
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      font-size: 0.95rem;
+      color: #8a6510;
+      margin-bottom: 1rem;
+    }
+    .spatialmem-topics summary {
+      cursor: pointer;
+      list-style: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-weight: 700;
+      color: #1C2D59;
+      padding: 0.4em 0.9em;
+      border: 1px solid #d2dcf0;
+      border-radius: 999px;
+      background: #f4f7ff;
+      transition: background 0.2s ease;
+    }
+    .spatialmem-topics summary:hover { background: #e8eeff; }
+    .spatialmem-topics summary::-webkit-details-marker { display: none; }
+    .spatialmem-chev { transition: transform 0.2s ease; font-size: 0.85em; }
+    .spatialmem-topics[open] .spatialmem-chev { transform: rotate(180deg); }
+    .spatialmem-topics ul { margin-top: 0.9rem; }
+    .spatialmem-topics li { margin-bottom: 0.5rem; line-height: 1.5; }
+  </style>
+
   <section class="section" id="paper_track">
     <div class="container is-max-desktop content">
 
@@ -718,6 +975,57 @@ The workshop aims to shape the next generation of spatially grounded AI, bridgin
               <li>
                 May include previously published work.
             </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- SpatialMem Track (Huawei-sponsored sub-track) -->
+      <div class="column is-12">
+        <div class="spatialmem-card">
+          <div class="spatialmem-glow"></div>
+          <div class="spatialmem-body">
+
+            <div class="spatialmem-head">
+              <div class="spatialmem-titlewrap">
+                <span class="spatialmem-new">★ NEW</span>
+                <h4 class="spatialmem-title">Huawei SpatialMem Track</h4>
+              </div>
+              <div class="spatialmem-sponsor">
+                <span>Sponsored by</span>
+                <img src="https://upload.wikimedia.org/wikipedia/en/0/04/Huawei_Standard_logo.svg" alt="Huawei" />
+              </div>
+            </div>
+
+            <p class="spatialmem-intro">
+              A dedicated sub-track on <strong>memory-centric, online, dynamic/4D or world-model-coupled spatial
+              intelligence</strong>. Includes both archival and non-archival submissions. Authors may submit to the main workshop track and also flag their paper as SpatialMem for consideration in this sub-track.
+              Submit as <strong>proceedings or non-archival</strong> exactly as above and simply
+              <strong>flag your paper as SpatialMem</strong> at submission.
+            </p>
+
+            <div class="spatialmem-awards">
+              🏆 <strong>Best Paper Award</strong> &amp; a dedicated <strong>Best SpatialMem Paper Award</strong> funded by Huawei.
+            </div>
+
+            <details class="spatialmem-topics">
+              <summary>Topics of interest <span class="spatialmem-chev">▾</span></summary>
+              <ul>
+                <li><strong>Dynamic &amp; Hierarchical Spatial Representations</strong> &mdash; persistent
+                  open-vocabulary 3D scene graphs (metric, semantic, topological, 4D) and multi-view-consistent,
+                  metric-grounded VLM reasoning.</li>
+                <li><strong>Test-Time Memory Evolution &amp; Updating</strong> &mdash; updating, editing and bounding a
+                  3D memory at inference across revisits; consolidation, selective forgetting, and memory for video
+                  world models.</li>
+                <li><strong>Neuro-Symbolic Spatial Reasoning</strong> &mdash; verifiable programs, tools and
+                  graph-query interfaces over 3D scene graphs for checkable inference.</li>
+                <li><strong>Systems &amp; Efficiency</strong> &mdash; on-device, power/memory-budgeted mapping +
+                  reasoning; constant-memory streaming maps and deployment-overhead benchmarks.</li>
+                <li><strong>Multi-Session Persistent Spatial Memory</strong> &mdash; representations and benchmarks for
+                  memory persisting across sessions (hours to days+), tracking identity, relations, uncertainty and
+                  provenance.</li>
+              </ul>
+            </details>
+
           </div>
         </div>
       </div>
