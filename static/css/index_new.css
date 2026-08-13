@@ -218,7 +218,7 @@ body {
 }
 
 .nav-glass-shell .dropdown-content {
-  top: calc(100% + 0.15rem);
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
   min-width: 190px;
