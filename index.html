@@ -77,7 +77,7 @@
       mobileNavToggle.setAttribute("aria-expanded", isOpen);
     });
 
-    siteNavigation.querySelectorAll(":scope > a").forEach((link) => {
+    Array.from(siteNavigation.children).filter((element) => element.tagName === "A").forEach((link) => {
       link.addEventListener("click", () => {
         siteNavigation.classList.remove("is-open");
         mobileNavToggle.setAttribute("aria-expanded", "false");
@@ -92,6 +92,15 @@
       });
     });
   </script>
+
+  <style>
+    .mobile-nav-toggle-wrap { display: none; }
+    @media screen and (max-width: 768px) {
+      .mobile-nav-toggle-wrap { display: flex; justify-content: flex-end; margin: 0 auto 0.7rem; }
+      #site-navigation { display: none; }
+      #site-navigation.is-open { display: flex; }
+    }
+  </style>
   
   <style>
     .announce-wrap { padding: 1.5rem 1.5rem 0; }
