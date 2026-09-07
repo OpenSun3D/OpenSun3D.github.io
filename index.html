@@ -180,6 +180,7 @@
     .announce-prize img { height: 22px; width: auto; vertical-align: middle; }
   </style>
 
+  <!--
   <div class="announce-wrap">
     <div class="announce">
       <div class="announce-glow"></div>
@@ -217,6 +218,7 @@
       </div>
     </div>
   </div>
+  -->
 
   <section class="section" id="Motivation">
     <div class="container is-max-desktop content">
@@ -230,6 +232,7 @@ The workshop aims to shape the next generation of spatially grounded AI, bridgin
     </div>
   </section>
 
+  <!-- Important Dates section temporarily hidden.
   <section class="section" id="global-timeline">
     <div class="container is-max-desktop content">
       <h2 class="title is-4">
@@ -351,6 +354,7 @@ The workshop aims to shape the next generation of spatially grounded AI, bridgin
     }
   });
   </script>
+  -->
 
 
 
@@ -431,9 +435,12 @@ The workshop aims to shape the next generation of spatially grounded AI, bridgin
     </div>
   </section> -->
 
-  <section class="section" id="schedule">
+  <div class="schedule-speakers-sections" style="display: flex; flex-direction: column;">
+  <section class="section" id="schedule" style="order: 2;">
     <div class="container is-max-desktop content">
-      <h2 class="title">Schedule — Room: Malmömässan B</h2>
+      <h2 class="title">Schedule</h2>
+      <p class="is-size-6">Workshop Room: Malmömässan B</p>
+      <p class="is-size-6">Poster Presentation Room: Malmömässan Exhibit Hall</p>
       <div class="content has-text-justified">
         <table class="table table-striped">
           <tr>
@@ -444,32 +451,35 @@ The workshop aims to shape the next generation of spatially grounded AI, bridgin
             <td>09:10 - 09:40</td>
             <td style="background-color:#8cd8fb72">
               Keynote 1 &nbsp;&nbsp;&nbsp;&nbsp;
-              <b>Matthias Nießner</b>
+              <a href="https://niessnerlab.org/members/matthias_niessner/profile.html" target="_blank"><b>Matthias Nießner</b></a> <span style="font-weight: normal;">(TUM / Spatial AI)</span>
             </td>
           </tr>
           <tr>
             <td>09:40 - 10:10</td>
             <td style="background-color:#8cd8fb72">
               Keynote 2 &nbsp;&nbsp;&nbsp;&nbsp;
-              <b>Dima Damen</b>
+              <a href="https://dimadamen.github.io/" target="_blank"><b>Dima Damen</b></a> <span style="font-weight: normal;">(University of Bristol / Google DeepMind)</span>
             </td>
           </tr>
           <tr>
             <td>10:10 - 11:00</td>
-            <td style="background-color: #ddadef37">Coffee Break &amp; Poster Session (Malmo Massan Exhibit Hall)</td>
+            <td style="background-color: #ddadef37">
+              Coffee Break &amp; Poster Session<br>
+              <small>Poster Presentation Room: Malmömässan Exhibit Hall</small>
+            </td>
           </tr>
           <tr>
             <td>11:00 - 11:30</td>
             <td style="background-color:#8cd8fb72">
               Keynote 3 &nbsp;&nbsp;&nbsp;&nbsp;
-              <b>Carl Doersch</b>
+              <a href="http://www.carldoersch.com/" target="_blank"><b>Carl Doersch</b></a> <span style="font-weight: normal;">(Google DeepMind)</span>
             </td>
           </tr>
           <tr>
             <td>11:30 - 12:00</td>
             <td style="background-color:#8cd8fb72">
               Keynote 4 &nbsp;&nbsp;&nbsp;&nbsp;
-              <b>Peter Kontschieder</b>
+              <a href="https://www.linkedin.com/in/peter-kontschieder-2a6410134/" target="_blank"><b>Peter Kontschieder</b></a> <span style="font-weight: normal;">(Meta)</span>
             </td>
           </tr>
           <tr>
@@ -487,7 +497,7 @@ The workshop aims to shape the next generation of spatially grounded AI, bridgin
     </div>
   </section>
 
-  <section class="section" id="Invited Speakers">
+  <section class="section" id="Invited Speakers" style="order: 1;">
     <div class="container is-max-desktop content">
       <h2 class="title" id="speakers">Keynote Speakers</h2>
 
@@ -603,6 +613,7 @@ The workshop aims to shape the next generation of spatially grounded AI, bridgin
     </div>
   </section>
 
+  </div>
   
 
   <script>
@@ -834,6 +845,30 @@ The workshop aims to shape the next generation of spatially grounded AI, bridgin
     .spatialmem-topics li { margin-bottom: 0.5rem; line-height: 1.5; }
   </style>
 
+  <section class="section" id="poster_presentation">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Poster Session</h2>
+      <div class="notification is-info is-light">
+        <ul>
+          <li>Poster Presentation Room: <strong>Malmömässan Exhibit Hall</strong>.</li>
+          <!-- Remove this temporary board-assignment notice after the 10:00&ndash;11:00 poster presentation. -->
+          <li>Poster board IDs: <strong>39&ndash;58</strong>. Any of these may be used for the <strong>10:00 am&ndash;11:00 am</strong> poster presentation.</li>
+          <li>Poster boards measure <strong>140 cm wide &times; 100 cm high</strong> (landscape orientation).</li>
+          <li><a href="poster_template_eccv26.pptx" download><strong>Download the ECCV 2026 poster template</strong> (.pptx).</a></li>
+          <li>Poster printing information will be posted on the website shortly.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const posterSession = document.getElementById("poster_presentation");
+      const speakers = document.getElementById("Invited Speakers");
+      if (posterSession && speakers) posterSession.after(speakers);
+    });
+  </script>
+
   <section class="section" id="paper_track">
     <div class="container is-max-desktop content">
 
@@ -848,18 +883,6 @@ The workshop aims to shape the next generation of spatially grounded AI, bridgin
         vertical-align: super;
       ">Closed</span>
     </h2>
-
-    <div class="notification is-info is-light">
-      <h4 class="title is-5">Poster Presentation Information</h4>
-      <ul>
-        <!-- Remove this temporary board-assignment notice after the 10:00&ndash;11:00 poster presentation. -->
-        <li>For the <strong>10:00 am&ndash;11:00 am</strong> poster presentation, any poster board with an ID from <strong>39&ndash;58</strong> may be used.</li>
-        <li>Poster boards measure <strong>140 cm wide &times; 100 cm high</strong> (landscape orientation).</li>
-        <li><a href="poster_template_eccv26.pptx" download><strong>Download the ECCV 2026 poster template</strong> (.pptx).</a></li>
-        <li>Poster printing information will be posted on the website shortly.</li>
-        <li>Room assignments will be posted on the app.</li>
-      </ul>
-    </div>
 
     <table class="table is-fullwidth is-striped">
       <thead>
@@ -1068,11 +1091,11 @@ The workshop aims to shape the next generation of spatially grounded AI, bridgin
         <span style="
           font-size: 0.6em;
           color: white;
-          background-color: #28a745;
+          background-color: #dc3545;
           border-radius: 4px;
           padding: 0.2em 0.5em;
           vertical-align: super;
-        ">Open</span>
+        ">Closed</span>
       </h2>
 
       <p class="has-text-justified">
