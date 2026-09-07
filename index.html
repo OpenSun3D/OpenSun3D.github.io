@@ -38,7 +38,12 @@
   <section>
     <div class="container is-max-widescreen">
       <div class="hero-body">
-        <h2 class="subtitle has-text-centered nav-glass-shell">
+        <div class="mobile-nav-toggle-wrap">
+          <button type="button" id="mobile-nav-toggle" class="button mobile-nav-toggle" aria-expanded="false" aria-controls="site-navigation">
+            <i class="fa fa-bars" aria-hidden="true"></i><span class="is-sr-only">Toggle navigation</span>
+          </button>
+        </div>
+        <nav id="site-navigation" class="subtitle has-text-centered nav-glass-shell" aria-label="Site navigation">
           <a href="#schedule" class="button nav-glass-button">Schedule</a>
           <a href="#speakers" class="button nav-glass-button">Speakers</a>
           <a href="#paper_track" class="button nav-glass-button">Paper Track</a>
@@ -58,13 +63,27 @@
               <a href="index_iccv23.html">ICCV 2023</a>
             </div>
           </div>
-        </h2>
+        </nav>
 
       </div>
     </div>
   </section>
 
   <script>
+    const mobileNavToggle = document.getElementById("mobile-nav-toggle");
+    const siteNavigation = document.getElementById("site-navigation");
+    mobileNavToggle.addEventListener("click", () => {
+      const isOpen = siteNavigation.classList.toggle("is-open");
+      mobileNavToggle.setAttribute("aria-expanded", isOpen);
+    });
+
+    siteNavigation.querySelectorAll(":scope > a").forEach((link) => {
+      link.addEventListener("click", () => {
+        siteNavigation.classList.remove("is-open");
+        mobileNavToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+
     document.querySelectorAll(".nav-glass-dropdown > button").forEach((button) => {
       button.addEventListener("click", () => {
         const dropdown = button.parentElement;

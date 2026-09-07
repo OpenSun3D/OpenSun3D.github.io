@@ -256,11 +256,37 @@ body {
   display: none;
 }
 
+.mobile-nav-toggle-wrap {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
+  .mobile-nav-toggle-wrap {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto 0.7rem;
+    max-width: 980px;
+  }
+
+  .mobile-nav-toggle {
+    min-height: 2.85rem;
+    min-width: 2.85rem;
+    padding: 0.7rem 0.85rem;
+    border: 1px solid rgba(255, 255, 255, 0.44);
+    border-radius: 999px;
+    background: rgba(28, 45, 89, 0.86);
+    color: #fff;
+  }
+
   .nav-glass-shell {
+    display: none;
     gap: 0.7rem;
     padding: 0.9rem;
     border-radius: 24px;
+  }
+
+  .nav-glass-shell.is-open {
+    display: flex;
   }
 
   .nav-glass-shell .nav-glass-button {
