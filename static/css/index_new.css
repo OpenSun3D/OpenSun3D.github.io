@@ -45,6 +45,11 @@ body {
   font-size: 14px;
 }
 
+.dropdown.is-open .dropdown-content {
+  display: block;
+  font-size: 14px;
+}
+
 /* latin-ext */
 @font-face {
   font-family: 'Lato';
@@ -268,6 +273,22 @@ body {
 
   .nav-glass-shell .dropdown-content {
     width: 100%;
+  }
+
+  #schedule .table {
+    font-size: 0.9rem;
+  }
+
+  #schedule .table td:first-child {
+    width: 6.5rem;
+    white-space: nowrap;
+  }
+
+  #paper_track .table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
   }
 }
 
