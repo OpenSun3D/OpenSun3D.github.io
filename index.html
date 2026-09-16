@@ -49,6 +49,7 @@
           <a href="#paper_track" class="button nav-glass-button">Paper Track</a>
           <!-- <a href="#posters" class="button">Posters</a> -->
           <a href="#challenge" class="button nav-glass-button">Challenge</a>
+          <a href="#winners" class="button nav-glass-button" style="background: linear-gradient(135deg, #ffd233, #f4a900); color: #3a2a00; border-color: #d99400; font-weight: 700;">🏆 Winners</a>
           <!-- <a href="#relatedwork" class="button">Related Work</a> -->
           <a href="#organizers" class="button nav-glass-button">Organizers</a>
           <div class="dropdown nav-glass-dropdown">
@@ -1215,6 +1216,237 @@ The workshop aims to shape the next generation of spatially grounded AI, bridgin
         <img src="https://eval.ai/dist/images/evalai-logo.png" width="25%" style="margin: 20px;">
       </div>
       -->
+    </div>
+  </section>
+
+  <style>
+    #winners.section { padding-top: 1.1rem; padding-bottom: 1.1rem; }
+    #winners h2.title { font-size: 1.55rem; margin-bottom: 0.4rem; }
+    #winners .title.is-4 { font-size: 1.1rem; margin-bottom: 0.35rem; }
+    #winners .columns { margin-top: 0; margin-bottom: 0; }
+    #winners .column { padding-top: 0.3rem; padding-bottom: 0.3rem; }
+    .winner-card {
+      height: 100%;
+      border-top: 3px solid #f0b429;
+    }
+    .winner-card .card-content { padding: 0.6rem 0.8rem; }
+    .winner-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.35rem;
+    }
+    .winner-head .buttons { margin-bottom: 0; flex-wrap: nowrap; flex-shrink: 0; }
+    .winner-card .award-tag {
+      display: inline-block;
+      font-size: 0.63rem;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      color: #6b4e04;
+      background: linear-gradient(135deg, #ffdd66, #f4b400);
+      border-radius: 999px;
+      padding: 0.2em 0.6em;
+      margin-right: 0.25rem;
+    }
+    .winner-card .archival-tag {
+      display: inline-block;
+      font-size: 0.63rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      color: #2b6cb0;
+      background: #eaf1fb;
+      border: 1px solid #cfe0f5;
+      border-radius: 999px;
+      padding: 0.2em 0.5em;
+    }
+    .winner-card .winner-paper-title {
+      color: #1C2D59;
+      font-weight: 800;
+      font-size: 0.88rem;
+      line-height: 1.22;
+      margin: 0 0 0.3rem;
+    }
+    .winner-card .winner-meta { color: #333; font-size: 0.8rem; line-height: 1.3; margin-bottom: 0.15rem; }
+    .winner-card .winner-meta .affil { color: #6b7280; }
+    .winner-card .winner-note { color: #9aa2b1; font-size: 0.72rem; font-style: italic; margin: 0.3rem 0 0; }
+    .winner-card .buttons { margin-bottom: 0; }
+    .winner-card .buttons .button { margin-bottom: 0.25rem; }
+    .winner-btn-primary {
+      background-color: #1C2D59;
+      border-color: #1C2D59;
+      color: #ffffff;
+      transition: background-color 0.15s ease;
+    }
+    .winner-btn-primary:hover,
+    .winner-btn-primary:focus {
+      background-color: #26386c;
+      border-color: #26386c;
+      color: #ffffff;
+    }
+    .winner-btn-off,
+    .winner-btn-off:hover,
+    .winner-btn-off:focus,
+    .winner-btn-off:active {
+      background-color: #565f80;
+      border-color: #565f80;
+      color: #e9ecf5;
+      opacity: 1;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+    .candidates-heading {
+      color: #1C2D59;
+      margin: 0.55rem 0 0.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-size: 0.8rem;
+    }
+    .candidate-item {
+      height: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.6rem;
+      border-left: 3px solid #c7d4ee;
+      background: #f8faff;
+      border-radius: 8px;
+      padding: 0.55rem 0.75rem;
+    }
+    .candidate-item .candidate-body { min-width: 0; }
+    .candidate-title { color: #1C2D59; font-weight: 700; font-size: 0.83rem; line-height: 1.22; margin-bottom: 0.2rem; }
+    .candidate-meta { color: #333; font-size: 0.75rem; line-height: 1.28; margin-bottom: 0; }
+    .candidate-meta .affil { color: #6b7280; }
+    .candidate-item .button { margin-bottom: 0; flex-shrink: 0; }
+  </style>
+
+  <section class="section" id="winners">
+    <div class="container is-max-desktop content">
+      <h2 class="title">🏆 Winners</h2>
+
+      <h3 class="title is-4">Best Papers</h3>
+      <div class="columns is-multiline">
+
+        <!-- Best Paper -->
+        <div class="column is-6">
+          <div class="card winner-card">
+            <div class="card-content">
+              <div class="winner-head">
+                <div>
+                  <span class="award-tag">Best Paper</span>
+                  <span class="archival-tag">Archival</span>
+                </div>
+                <div class="buttons">
+                  <a class="button is-small winner-btn-primary" href="https://openreview.net/attachment?id=Ju96gCoQx7&name=pdf" target="_blank" rel="noopener">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span>
+                  </a>
+                </div>
+              </div>
+              <p class="winner-paper-title">Average Precision Without a Ranking: A Constant Confidence Decides Open-Vocabulary 3D Instance Segmentation Comparisons</p>
+              <p class="winner-meta"><strong>Srinivas Harish</strong> <span class="affil">· NYU</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Best SpatialMem Paper -->
+        <div class="column is-6">
+          <div class="card winner-card">
+            <div class="card-content">
+              <div class="winner-head">
+                <div>
+                  <span class="award-tag">Best Paper · SpatialMem</span>
+                  <span class="archival-tag">Non-Archival</span>
+                </div>
+                <div class="buttons">
+                  <a class="button is-small winner-btn-primary" href="https://openreview.net/attachment?id=4LxOwceXMp&name=pdf" target="_blank" rel="noopener">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span>
+                  </a>
+                </div>
+              </div>
+              <p class="winner-paper-title">SceneTok: A Compressed, Diffusable Token Space for 3D Scenes</p>
+              <p class="winner-meta"><strong>Mohammad Asim, Christopher Wewer, Jan Eric Lenssen</strong> <span class="affil">· MPI</span></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <h4 class="title is-4" style="margin-top: 0.55rem;">Award Candidates</h4>
+      <div class="columns is-multiline">
+
+        <!-- Candidate: Stream3D -->
+        <div class="column is-6">
+          <div class="candidate-item">
+            <div class="candidate-body">
+              <p class="candidate-title">Stream3D: Sequential Multi-View 3D Generation via Evidential Memory</p>
+              <p class="candidate-meta"><strong>Kaichen Zhou, Zeyang Bai, Xinhai Chang, Mengyu Wang, Paul Pu Liang, Fangneng Zhan</strong> <span class="affil">· MIT · UCAS · Peking · Harvard · HKUST</span></p>
+            </div>
+            <a class="button is-small winner-btn-primary" href="https://openreview.net/pdf?id=xaIngwYSIo" target="_blank" rel="noopener">
+              <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Candidate: SkySplat-OV -->
+        <div class="column is-6">
+          <div class="candidate-item">
+            <div class="candidate-body">
+              <p class="candidate-title">SkySplat-OV: Generalizable Language Gaussian Splatting for Open-Vocabulary Scene Understanding from Sparse Satellite Views</p>
+              <p class="candidate-meta"><strong>Xuejun Huang, Yingying Pei, Yuehan Ding, Xiaoyan Liu, Yi Wan, Xin Zhang</strong> <span class="affil">· Wuhan University · Aerospace Information Research Institute</span></p>
+            </div>
+            <a class="button is-small winner-btn-primary" href="https://openreview.net/pdf?id=9g2j9wNmDv" target="_blank" rel="noopener">
+              <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <h3 class="title is-4" style="margin-top: 0.55rem;">Challenge Winners</h3>
+      <div class="columns is-multiline">
+
+        <!-- Tracks 1 & 3 -->
+        <div class="column is-6">
+          <div class="card winner-card">
+            <div class="card-content">
+              <span class="award-tag">Tracks 1 &amp; 3</span>
+              <p class="winner-meta" style="margin-top: 0.4rem;"><strong>Hanyang Kong</strong> <span class="affil">· National University of Singapore</span></p>
+              <p class="winner-meta"><strong>Xingyi Yang</strong> <span class="affil">· The Hong Kong Polytechnic University</span></p>
+              <div class="buttons" style="margin-top: 0.45rem;">
+                <button type="button" class="button is-small winner-btn-off" aria-disabled="true" title="Coming soon">
+                  <span class="icon"><i class="fas fa-file-alt"></i></span><span>Track 1 Report</span>
+                </button>
+                <button type="button" class="button is-small winner-btn-off" aria-disabled="true" title="Coming soon">
+                  <span class="icon"><i class="fas fa-file-alt"></i></span><span>Track 3 Report</span>
+                </button>
+              </div>
+              <p class="winner-note">Technical reports coming soon.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Track 2 -->
+        <div class="column is-6">
+          <div class="card winner-card">
+            <div class="card-content">
+              <span class="award-tag">Track 2</span>
+              <p class="winner-meta" style="margin-top: 0.4rem;"><strong>Pranjal Aggarwal</strong> <span class="affil">· Carnegie Mellon University</span></p>
+              <p class="winner-meta" style="margin-top: 0.4rem;"><strong>Sean Welleck</strong> <span class="affil">· Carnegie Mellon University</span></p>
+              <div class="buttons" style="margin-top: 0.45rem;">
+                <button type="button" class="button is-small winner-btn-off" aria-disabled="true" title="Coming soon">
+                  <span class="icon"><i class="fas fa-file-alt"></i></span><span>Technical Report</span>
+                </button>
+                <button type="button" class="button is-small winner-btn-off" aria-disabled="true" title="Coming soon">
+                  <span class="icon"><i class="fas fa-video"></i></span><span>Video Talk</span>
+                </button>
+              </div>
+              <p class="winner-note">Technical report &amp; video talk coming soon.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 

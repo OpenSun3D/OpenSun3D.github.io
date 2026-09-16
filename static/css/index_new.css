@@ -174,10 +174,10 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 0.9rem;
+  gap: 0.5rem;
   margin: 0 auto;
-  padding: 1rem 1.2rem;
-  max-width: 980px;
+  padding: 0.7rem 1rem;
+  max-width: 1040px;
   border: 1px solid rgba(255, 255, 255, 0.58);
   border-radius: 28px;
   background: rgba(255, 255, 255, 0.26);
@@ -189,8 +189,9 @@ body {
 }
 
 .nav-glass-shell .nav-glass-button {
-  min-height: 2.85rem;
-  padding: 0.7rem 1.35rem;
+  min-height: 2.2rem;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.9rem;
   border: 1px solid rgba(255, 255, 255, 0.44);
   border-radius: 999px;
   background: rgba(28, 45, 89, 0.86);
